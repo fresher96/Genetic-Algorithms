@@ -7,11 +7,14 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\usepackage{hypcap}
 
+% preferences
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
 %\renewcommand\thesection{\Roman{section}}
-
+\hypersetup{colorlinks=true, allcolors=black}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -21,12 +24,13 @@
 
 
 
+
 % document begins here
 \begin{document}
 
 % cover page
-\pagenumbering{gobble}
-\addcontentsline{toc}{section}{Cover Page}
+\pagenumbering{roman}
+\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Cover Page}
 
 {
 \begin{wrapfigure}{r}{0.25\textwidth}
@@ -61,12 +65,11 @@ Keywords: genetic algorithms, NP, non-determenstic.
 
 \vfill
 \centerline{\date{\today}}
+\thispagestyle{empty}
 \pagebreak
 
 % abstract page
-\pagenumbering{roman}
-\setcounter{page}{2}
-\addcontentsline{toc}{section}{Abstract}
+\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Abstract}
 
 \begin{abstract}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -80,7 +83,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \pagebreak
 
 % table of contents page
-\addcontentsline{toc}{section}{Table of Contents}
+\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Contents}
 \tableofcontents
 \pagebreak
 
@@ -104,7 +107,7 @@ Donec ullamcorper, felis non sodales...
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
 Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra 
 sollicitudin.  Praesent imperdiet mi necante...
- 
+
 \subsection{First Subsection}
 Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
  

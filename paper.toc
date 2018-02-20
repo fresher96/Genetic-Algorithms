@@ -1,6 +1,6 @@
-\contentsline {section}{Cover Page}{}
-\contentsline {section}{Abstract}{ii}
-\contentsline {section}{Table of Contents}{iii}
-\contentsline {section}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {2}Second Section}{1}
-\contentsline {subsection}{\numberline {2.1}First Subsection}{1}
+\contentsline {section}{Cover Page}{i}{section*.1}
+\contentsline {section}{Abstract}{ii}{section*.2}
+\contentsline {section}{Contents}{iii}{section*.3}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Second Section}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}First Subsection}{1}{subsection.2.1}
