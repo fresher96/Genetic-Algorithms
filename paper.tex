@@ -10,6 +10,7 @@
 
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
+%\renewcommand\thesection{\Roman{section}}
 
 
 % title
@@ -24,6 +25,9 @@
 \begin{document}
 
 % cover page
+\pagenumbering{gobble}
+\addcontentsline{toc}{section}{Cover Page}
+
 {
 \begin{wrapfigure}{r}{0.25\textwidth}
 \hfill
@@ -40,6 +44,11 @@ Fourth Year
 \vspace{25mm}
 {\let\newpage\relax\maketitle}
 
+\vspace{-10mm}
+\begin{center}
+Keywords: genetic algorithms, NP, non-determenstic.
+\end{center}
+
 \vspace{5mm}
 \begin{center}
 \begin{align*}
@@ -54,27 +63,56 @@ Fourth Year
 \centerline{\date{\today}}
 \pagebreak
 
+% abstract page
+\pagenumbering{roman}
+\setcounter{page}{2}
+\addcontentsline{toc}{section}{Abstract}
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+\pagebreak
+
+% table of contents page
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+\pagebreak
+
+
+
 
 % first page starts here
-\section{intro}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\pagenumbering{arabic}
 
-\subsection{intro-sub}
-dfsfafs
+\section{Introduction}
+ 
+This is the first section.
+ 
+Lorem  ipsum  dolor  sit  amet,  consectetuer  adipiscing  
+elit.   Etiam  lobortisfacilisis sem.  Nullam nec mi et 
+neque pharetra sollicitudin.  Praesent imperdietmi nec ante. 
+Donec ullamcorper, felis non sodales...
+ 
+\section{Second Section}
+ 
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra 
+sollicitudin.  Praesent imperdiet mi necante...
+ 
+\subsection{First Subsection}
+Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
+ 
+\section*{Unnumbered Section}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem
 
-\section{conc}
-lsdjfslfd
+
 
 % end of document
 \end{document}
