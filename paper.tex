@@ -9,6 +9,7 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 
 \graphicspath{ {images/} }
+\newcommand{\lineSeparationLength}{2mm}
 
 
 % title
@@ -22,21 +23,24 @@
 % document begins here
 \begin{document}
 
+% cover page
 {
-\begin{wrapfigure}{r}{0.20\textwidth}
+\begin{wrapfigure}{r}{0.25\textwidth}
 \hfill
 \includegraphics[width=0.9\linewidth]{hiast}
 \end{wrapfigure}
 
-\ \\[1.0mm]
-Syrian Arab Republic\\
-Higher Institute for Applied Sciences and Technology\\
-Informatics Department\\
-Fourth Year\\
+\ \\[\lineSeparationLength]
+Syrian Arab Republic \\[\lineSeparationLength]
+Higher Institute for Applied Sciences and Technology \\[\lineSeparationLength]
+Informatics Department \\[\lineSeparationLength]
+Fourth Year
 }
 
+\vspace{25mm}
 {\let\newpage\relax\maketitle}
 
+\vspace{5mm}
 \begin{center}
 \begin{align*}
 \text{Author: }					& \textit{Farouk Hjabo} \\
@@ -50,6 +54,8 @@ Fourth Year\\
 \centerline{\date{\today}}
 \pagebreak
 
+
+% first page starts here
 \section{intro}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -69,4 +75,6 @@ dfsfafs
 
 \section{conc}
 lsdjfslfd
+
+% end of document
 \end{document}

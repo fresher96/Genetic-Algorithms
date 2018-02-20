@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.14)  20 FEB 2018 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.14)  20 FEB 2018 23:26
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -571,30 +571,25 @@ File: images/hiast.jpg Graphic file (type jpg)
 <use images/hiast.jpg>
 Package pdftex.def Info: images/hiast.jpg  used on input line 28. on input line
  28.
-Package pdftex.def Info: Requested size: 78.04987pt x 74.43161pt on input line 
+Package pdftex.def Info: Requested size: 97.56383pt x 93.03952pt on input line 
 28.
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--37
-
- []
-
 [1
 
 {C:/Users/Farouk/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/h
 iast.jpg>] [2] (paper.aux) ) 
 Here is how much of TeX's memory you used:
- 2911 strings out of 493312
- 37780 string characters out of 3138896
- 105551 words of memory out of 3000000
- 6415 multiletter control sequences out of 15000+200000
+ 2912 strings out of 493312
+ 37800 string characters out of 3138896
+ 105556 words of memory out of 3000000
+ 6416 multiletter control sequences out of 15000+200000
  10674 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,31p,274b,214s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,31p,274b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (2 pages, 93149 bytes).
+Output written on paper.pdf (2 pages, 93147 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
