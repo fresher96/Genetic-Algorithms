@@ -9,14 +9,12 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{hyperref}
 \usepackage{hypcap}
-\usepackage{biblatex}
 
 % preferences
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
 %\renewcommand\thesection{\Roman{section}}
 \hypersetup{colorlinks=true, allcolors=black}
-\addbibresource{references.bib}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -97,7 +95,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \section{Introduction}
  
-This is the first section.
+This is the first \cite{knuth-acp} section. \cite{dirac}
  
 Lorem  ipsum  dolor  sit  amet,  consectetuer  adipiscing  
 elit.   Etiam  lobortisfacilisis sem.  Nullam nec mi et 
@@ -118,6 +116,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 Etiam \cite{einstein} lobortis facilisissem
 
 
-\printbibliography
+\bibliographystyle{abbrv}
+\bibliography{references}
+
 % end of document
 \end{document}

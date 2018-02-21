@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{dirac}
+P.~A.~M. Dirac.
+\newblock {\em The Principles of Quantum Mechanics}.
+\newblock International series of monographs on physics. Clarendon Press, 1981.
+
+\bibitem{einstein}
+A.~Einstein.
+\newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
+  electrodynamics of moving bodies].
+\newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
+
+\bibitem{knuth-acp}
+D.~E. Knuth.
+\newblock {\em The Art of Computer Programming}.
+\newblock Four volumes. Addison-Wesley, 1968.
+\newblock Seven volumes planned.
+
+\end{thebibliography}
