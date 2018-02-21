@@ -1,9 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{Cover Page}{i}{section*.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{Abstract}{ii}{section*.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{Contents}{iii}{section*.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Genetic Algorithms}{1}{section.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{1}{section.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Experimental Results}{1}{section.4}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Conclusion}{2}{section.5}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{References}{3}{section*.5}

@@ -1924,6 +1924,10 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">einstein</bcf:citekey>
+    <bcf:citekey order="2">dirac</bcf:citekey>
+    <bcf:citekey order="3">ctan</bcf:citekey>
+    <bcf:citekey order="4">knuth-acp</bcf:citekey>
+    <bcf:citekey order="4">ctan</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

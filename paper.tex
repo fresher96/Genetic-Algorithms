@@ -3,17 +3,21 @@
 
 % including packages
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{hyperref}
 \usepackage{hypcap}
+\usepackage[autostyle]{csquotes}
+\usepackage[giveninits=true]{biblatex}
 
 % preferences
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
 \hypersetup{colorlinks=true, allcolors=black}
+\addbibresource{references.bib}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -129,7 +133,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 \section{Conclusion}
-Lorem \cite{ctan} ipsum dolor \cite{knuth-acp} sit amet, consectetur adipisicing elit, sed do eiusmod
+Lorem \cite{ctan} ipsum dolor \cite{knuth-acp, ctan} sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -141,8 +145,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 \cleardoublepage\phantomsection\addcontentsline{toc}{section}{References}
-\bibliographystyle{abbrv}
-\bibliography{references}
+%\bibliographystyle{abbrv}
+%\bibliography{references}
+\printbibliography
 
 % end of document
 \end{document}
