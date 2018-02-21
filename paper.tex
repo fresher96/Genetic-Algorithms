@@ -9,13 +9,14 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{hyperref}
 \usepackage{hypcap}
-
+\usepackage{biblatex}
 
 % preferences
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
 %\renewcommand\thesection{\Roman{section}}
 \hypersetup{colorlinks=true, allcolors=black}
+\addbibresource{references.bib}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -114,9 +115,9 @@ Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
  
 \section*{Unnumbered Section}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
-Etiam lobortis facilisissem
+Etiam \cite{einstein} lobortis facilisissem
 
 
-
+\printbibliography
 % end of document
 \end{document}
