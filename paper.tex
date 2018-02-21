@@ -24,6 +24,7 @@
 	doi=false,
 	url=false
 }
+\setlength{\parskip}{1em}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -103,12 +104,21 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \pagenumbering{arabic}
 
 \section{Introduction}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Once the NP-hardness of a combinatorial optimization
+problem is established, the search for an optimal solution
+is abandoned. The goal then becomes one of finding a
+good heuristic, i.e. a polynomial running time algorithm
+that can find solutions close to the optimal. In most cases,
+traditional heuristics are problem dependent; a heuristic is
+tailored to the specific problem it is trying to solve.
+
+In this paper, we present an alternative approach that
+uses genetic algorithms as a generalized heuristic for solving NP-hard combinatorial optimization problems. The
+application of a genetic algorithm is demonstrated here for
+the \emph{minimum vertex cover} problem. These algorithms
+have been successfully applied to a broad range of problems. This wide range can be tackled by genetic algorithms
+mainly due to the fact that they work with an encoding of
+the domain rather than with the problem domain itself.
 
 
 \section{Genetic Algorithms}
@@ -139,9 +149,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 \section{Conclusion}
-Lorem \cite{ctan} ipsum dolor \cite{knuth-acp, ctan,
-khuri1994evolutionary, back1994evolutionary}
-\cite{goldberg1989genetic, coley1999introduction} sit amet, consectetur adipisicing elit, sed do eiusmod
+Lorem \cite{ctan} ipsum dolor \cite{khuri1994evolutionary}
+sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
