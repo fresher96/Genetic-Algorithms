@@ -11,13 +11,19 @@
 \usepackage{hyperref}
 \usepackage{hypcap}
 \usepackage[autostyle]{csquotes}
-\usepackage[giveninits=true]{biblatex}
+\usepackage[]{biblatex}
 
 % preferences
 \graphicspath{ {images/} }
 \newcommand{\lineSeparationLength}{2mm}
 \hypersetup{colorlinks=true, allcolors=black}
 \addbibresource{references.bib}
+\ExecuteBibliographyOptions{
+	giveninits=true,
+	isbn=false,
+	doi=false,
+	url=false
+}
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -133,7 +139,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 \section{Conclusion}
-Lorem \cite{ctan} ipsum dolor \cite{knuth-acp, ctan} sit amet, consectetur adipisicing elit, sed do eiusmod
+Lorem \cite{ctan} ipsum dolor \cite{knuth-acp, ctan,
+khuri1994evolutionary, back1994evolutionary}
+\cite{goldberg1989genetic, coley1999introduction} sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
