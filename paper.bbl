@@ -11,6 +11,11 @@ A.~Einstein.
   electrodynamics of moving bodies].
 \newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
 
+\bibitem{ctan}
+G.~D. Greenwade.
+\newblock The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN}).
+\newblock {\em TUGBoat}, 14(3):342--351, 1993.
+
 \bibitem{knuth-acp}
 D.~E. Knuth.
 \newblock {\em The Art of Computer Programming}.

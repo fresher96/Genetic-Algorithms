@@ -2,5 +2,8 @@
 \contentsline {section}{Abstract}{ii}{section*.2}
 \contentsline {section}{Contents}{iii}{section*.3}
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}Second Section}{1}{section.2}
-\contentsline {subsection}{\numberline {2.1}First Subsection}{1}{subsection.2.1}
+\contentsline {section}{\numberline {2}Genetic Algorithms}{1}{section.2}
+\contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{1}{section.3}
+\contentsline {section}{\numberline {4}Experimental Results}{1}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{2}{section.5}
+\contentsline {section}{References}{3}{section*.5}
