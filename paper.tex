@@ -172,22 +172,46 @@ The basic iteration cycle of a genetic algorithm proceeds on a population
 of individuals, each of which represents a search point in the space
 of potential solutions of a given optimization problem.
 In case of a canonical genetic algorithm, each individual is a binary vector
-$ \vec{x} = ( x_1, x_2, \dots, x_n ) \in \{0, 1\}^n $
+$ \vec{x} = ( x_1, \dots, x_n ) \in \{0, 1\}^n $
 of fixed length $n$. The fitness function
 $ f: \{0, 1\}^n \rightarrow \mathbb{R} $
 provides a quality measure which is used by the selection procedure to direct
 the search towards regions of the search space where the
 average fitness of the population increases. The recombination operator
 allows for the exchange of information between different individuals, and
-mutation introduces innovation into the population.
-
-After a uniform random initialization of the population
-the evolution proceeds by iterating the steps selection,
-recombination (crossover), and mutation (see figure~\ref{fig:ga})
-until a termination criterion is fulfilled.
+mutation introduces innovation into the population. \\
+This cycle is repeated until a termination criterion is fulfilled.
 In most cases, the algorithm is terminated after a certain number of
 iterations of the basic cycle or when a satisfactory fitness
 level has been reached.
+refer to figure~\ref{fig:ga} for a visual representation of this process.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{ga}
+\caption{general schema for genetic algorithms}
+\label{fig:ga}
+\end{figure}
+
+The population size (denoted as $u$) depends on the nature of the problem,
+but typically contains several hundreds or thousands of possible solutions.
+Often, the initial population is generated randomly, allowing the entire range
+of possible solutions (the search space).
+Occasionally, the solutions may be `seeded' in areas where optimal solutions
+are likely to be found.
+
+Normally, selection in genetic algorithms is a probabilistic operator
+which uses the relative fitness 
+$ p_s \left( \vec{x_i} \right) = 
+f \left( \vec{x_i} \right) / \sum_{j=1}^uf \left( \vec{x_j} \right) $
+to serve as selection probabilities
+($u$ denotes the population size). This selection operator
+is called proportional selection. If the problem under
+consideration is a minimization one, or if the fitness
+function can take negative values, then $ f \left( \vec{x_i} \right) $ has to be
+linearly transformed before calculating selection probabilities.
+This technique known as linear dynamic scaling is commonly used
+in genetic algorithms (see [13], pp. 123-124, or [14]).
 
 The recombination (crossover) operator allows for the
 exchange of information between different individuals. The
@@ -205,19 +229,6 @@ whether to exchange it or not [19]. The strong mixing effect
 introduced by uniform crossover is sometimes helpful
 to overcome local optima.
 
-Normally, selection in genetic algorithms is a probabilistic operator
-which uses the relative fitness 
-$ p_s \left( \vec{x_i} \right) = 
-f \left( \vec{x_i} \right) / \sum_{j=1}^uf \left( \vec{x_j} \right) $
-to serve as selection probabilities
-($u$ denotes the population size). This selection operator
-is called proportional selection. If the problem under
-consideration is a minimization one, or if the fitness
-function can take negative values, then $ f \left( \vec{x_i} \right) $ has to be
-linearly transformed before calculating selection probabilities.
-This technique known as linear dynamic scaling is commonly used
-in genetic algorithms (see [13], pp. 123-124, or [14]).
-
 Innovation, i.e. new information, is introduced into the
 population by means of mutation, which works by inverting
 bits with a small probability
@@ -226,14 +237,6 @@ Though mutation is often interpreted as a rather unimportant operator
 in genetic algorithms [9], recent theoretical
 work gives strong evidence for an appropriate choice of a
 mutation rate $ p_m = 1/n $ on many problems [2; 12].
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=1\textwidth]{ga}
-\caption{general schema for genetic algorithms}
-\label{fig:ga}
-\end{figure}
 
 
 
