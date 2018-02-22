@@ -1923,10 +1923,9 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">einstein</bcf:citekey>
-    <bcf:citekey order="2">dirac</bcf:citekey>
-    <bcf:citekey order="3">ctan</bcf:citekey>
-    <bcf:citekey order="4">khuri1994evolutionary</bcf:citekey>
+    <bcf:citekey order="1">goldberg1989genetic</bcf:citekey>
+    <bcf:citekey order="2">einstein</bcf:citekey>
+    <bcf:citekey order="3">dirac</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
