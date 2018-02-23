@@ -30,6 +30,10 @@
 \setlength{\parskip}{1em}
 \newcommand{\textem}[1]{\textbf{\textit{#1}}}
 \newtheorem{lemma}{Lemma}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\algnewcommand\algorithmicto{\textbf{to}}
+\algrenewtext{For}[3]%
+{\algorithmicfor\ #1 = #2 \algorithmicto\ #3 \algorithmicdo}
 
 
 % title
@@ -190,7 +194,7 @@ iterations of the basic cycle or when a satisfactory fitness
 level has been reached.
 refer to figure~\ref{fig:ga} for a visual representation of this process.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{ga}
 \caption{general schema for genetic algorithms}
@@ -359,6 +363,7 @@ problem. A solution to the maximum clique problem is obtained by
 taking the complement of the minimum vertex cover of $\bar{G}$.
 
 \subsection{Related Algorithms}
+\label{sec:ra}
 Since we are interested in covering all the edges of the
 given graph by using as few nodes as possible, one might
 be tempted to use a greedy-based heuristic to tackle the
@@ -376,7 +381,7 @@ levels. More precisely, each graph consists of $n = 3k + 4 (k \geq 1)$
 nodes; $k+2$ nodes on the first level, labeled $1, 2, \dots, k+2$;
 followed by $k+2$ nodes on the second level, labeled $k+3, \dots, 2k+4$;
 while the $k$ nodes of the third level are labeled $2k+5, \dots, 3k+4$.
-The regular graph for $k = 4$ can be found in figure~\ref{fig:g1}.
+The regular graph for $k = 3$ can be found in figure~\ref{fig:ps}.
 A minimum vertex cover is obtained by choosing all
 the nodes of the second level, but the greedy strategy
 would start with the nodes of the third level, since these
@@ -385,10 +390,22 @@ finds a solution of size $2k + 2$ (since it has to select $k + 2$
 nodes in addition to the nodes of the third level), while
 the optimal solution has size $k + 2$.
 However this algorithm is not totally useless. It may be shown that it always
-achieves the ratio $\Theta(\lg n)$, where $n$ is the number of vertices.
+achieves the ratio $\Theta(\lg n)$\footnote{$f(n) = \Theta(g(n)) \iff
+\exists \alpha, \beta, n_0 : \forall n \geq n_0, \ 
+\alpha \cdot g(n) \leq f(n) \leq \beta \cdot g(n)
+$},
+where $n$ is the number of vertices.
 That is, if $C^*(n)$ is the size of the optimal
 solution and $C(n)$ is the size of the solution found by the aforementioned
 algorithm. Then we have $\frac{C(n)}{C^*(n)} = \Theta(\lg n)$ [9], p-323.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{ps}
+\caption{Construction of the regular graph after Papadimitriou
+and Steiglitz with $k=3$.}
+\label{fig:ps}
+\end{figure}
 
 Fortunately, a simpler and better algorithm exists.
 The following simple algorithm is surprisingly the
@@ -396,7 +413,7 @@ best approximation algorithm known for the mvcp ([9],
 p. 301).
 
 \begin{algorithm}
-\caption{vercov}
+\caption{vercov($G = (V, E)$)}
 \label{alg:vercov}
 \begin{algorithmic}[1]
 
@@ -405,6 +422,7 @@ p. 301).
 \State $E' \gets E$
 \While{$E' \neq \phi$}
 \State randomly choose $ \langle u, v \rangle \in E'$
+\label{alg:rand}
 \State $C \gets C \cup \{u, v\}$
 \State $E' \gets E' -
 \{ \langle x, y \rangle \in E' : x=u \vee y=v \vee x=v \vee y=u \}$
@@ -421,11 +439,12 @@ the size of the vertex cover
 it returns is guaranteed to be no more than twice the
 size of an optimal vertex cover ([1], p. 968).
 More precisely, if $C^*$ is the size of the optimal
-solution and $C$ is the size of the solution returned by Algorithm~\ref{alg:vercov}
+solution and $C$ is the size of the solution returned by algorithm~\ref{alg:vercov}
 then the inequality $C \leq 2C^*$ must hold (notice that here the approximation
 doesn't depend on the number of vertices $n$).
 
 \subsection{GA for the mvcp}
+\label{sec:GAmvcp}
 In order to apply GA to solve the mvcp, a cover $V'$ is represented
 by a binary vector $\vec{x} = x_1x_2 \dots x_n$ where $x_i = 1$ if
 the $i^{\text{th}}$ node is in $V'$, and $x_i = 0$ if it is not.
@@ -475,14 +494,132 @@ $u = 50$, a mutation rate $p_m = 1/n$, crossover rate
 $p_c = 0.6$, proportional selection, and two-point crossover.
 As reported in [2, 12], the latter is expected to perform
 better than the traditional one-point crossover.
+The termination criterion is specified in section~\ref{sec:er}.
 
 
 \section{Experimental Results}
 \label{sec:er}
-For the experimental tests, random graphs of size $n = 100$ with different
+For the experimental tests,
+the genetic algorithm software package GENEsYs is used [1]misp.
+This implementation is based on the widely used GENESIS software by Grefenstette
+(see [3], pp. 374-377 misp), but allows for more 
+flexibility concerning genetic operators and data monitoring.
+The parameter settings for our experiments are
+given in section~\ref{sec:GAmvcp}.
+
+
+Multiple problem instances are used to demonstrate the applicability of GAs to tackle the mvcp
+The results in table~\ref{fig:t1}
+and table~\ref{fig:t2} correspond to the first test set, which consists of
+five random graphs of size $n = 100$ with different
 edge densities $d$, $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$, are used.
-an edge density of d = 0:1 means that an edge is placed between two
-nodes with a probability of 0.1. 
+An edge density of $d = 0.1$ means that an edge is placed between two
+nodes with a probability of 0.1.
+Moreover we construct the graphs in a way that guarantees an optimum of quality 55
+(we set $k = 55$ in algorithm~\ref{alg:gen}).
+In addition to the regular graphs introduced by
+Papadimitriou and Steiglitz and described in section~\ref{sec:ra}.
+Recall that these graphs contain $n=3k+4 (k \geq 1)$ nodes distributed on three levels.
+They can be scaled up by choosing high values for $k$.
+A graph instance of the regular graph of size $n = 100 (k=32)$ is chosen.
+
+\begin{algorithmic}[1]
+
+\State randomly select $V' = \{i_1, \dots, i_k\} \subseteq V = \{1, \dots, n\}$
+\Comment{randomly select k different nodes}
+\For
+
+\State $C \gets \{ \}$
+\Comment{$C$ contains the vertex cover being constructed}
+\State $E' \gets E$
+\While{$E' \neq \phi$}
+\State randomly choose $ \langle u, v \rangle \in E'$
+\label{alg:rand}
+\State $C \gets C \cup \{u, v\}$
+\State $E' \gets E' -
+\{ \langle x, y \rangle \in E' : x=u \vee y=v \vee x=v \vee y=u \}$
+\State \Comment{remove from $E'$ every edge incident on either $u$ or $v$}
+\EndWhile
+\State \Return $C$
+
+\end{algorithmic}
+\end{algorit
+For each of these graphs, a total of
+$N = 100$ independent runs of the genetic algorithm is performed.
+The results are summarized in table~\ref{fig:t1} for the best
+fitness values that were encountered during the 100 runs.
+For each problem instance, the different fitness values that were
+obtained and their frequencies are recorded.
+Furthermore, the average fitness value $\bar{f}$ over
+all 100 runs is indicated at the bottom of the table.
+For example, the first column in table~\ref{fig:t1} indicates
+that the best obtained fitness value in 1 of the 100 runs was $f(\vec{x}) = 53$,
+the best obtained fitness value in 1 of the 100 runs was $f(\vec{x}) = 54$,
+the best obtained fitness value in 3 of the 100 runs was $f(\vec{x}) = 55$, and so on...
+And the average of these values is indicated by $\bar{f}$, which is the average value of
+the best obtained fitness values over the 100 runs.
+
+As a termination criterion for the genetic algorithm, a bound for the total number of function evaluations is set.
+For example The total number of function evaluations per single run is chosen to be $2 \cdot 10^4$ in table~\ref{fig:t1}.
+That is, the algorithm terminates when $2 \cdot 10^4$ evaluations of the fitness function
+had occurred.
+This bound is indicated as an index $t$ in the notation $f_t(\vec{x})$.
+Consequently, only a small fraction of the search space is explored by the genetic algorithm.
+This fraction is about $ 2 \cdot 10^4 / 2^{100} \approx 1.6 \cdot 10^{-24} \% $ for the first test set.
+and it is about $ 4 \cdot 10^4 / 2^{200} \approx 2.5 \cdot 10^{-54} \% $ for the second test set.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{t1}
+\caption{general schema for genetic algorithms}
+\label{fig:t1}
+\end{figure}
+
+For each of the problems in the first test set, a total of $N=100$
+independent runs of the vercov algorithm is performed. The results are summarized in table~\ref{fig:t2}.
+Notice that for one problem instance, the results may differ in each run due to the
+non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:rand}).
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{t2}
+\caption{general schema for genetic algorithms}
+\label{fig:t2}
+\end{figure}
+
+To test the behaviour of the genetic algorithm
+as well as the vercov algorithm for an even
+larger problem size, The same experiments were performed for larger graphs
+The results in table~\ref{fig:t3}
+and table~\ref{fig:t4} correspond to the second test set, which consists of
+five random graphs of size $n = 200$ with different
+edge densities $d$, $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$, are used.
+Moreover we construct the graphs in a way that guarantees an optimum of quality 110
+(see algorithm~\ref{alg:gen}).
+In addition to a graph instance of the regular graphs introduced by
+Papadimitriou and Steiglitzof of size $n = 220 (k=66)$.
+In this case, the genetic algorithm
+was allowed to run for $4 \cdot 10^4$ function evaluations.
+The corresponding results obtained by the
+genetic algorithm are shown in table~\ref{fig:t3}, while the results
+from the vercov algorithm are presented in table~\ref{fig:t4}.
+See the previous paragraphs for a better understanding of these results.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{t3}
+\caption{general schema for genetic algorithms}
+\label{fig:t3}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{t4}
+\caption{general schema for genetic algorithms}
+\label{fig:t4}
+\end{figure}
+
+\subsection{expermental observations}
 
 
 \section{Conclusion}
