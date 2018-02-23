@@ -2,13 +2,25 @@
 \BOOKMARK [1][-]{section*.2}{Abstract}{}% 2
 \BOOKMARK [1][-]{section*.3}{Contents}{}% 3
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.2}{Genetic Algorithms}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{The Intuition Behind GAs}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Typical GA Schema}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{The Minimum Vertex Cover Problem}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{Related Algorithms}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{GA for the mvcp}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Experimental Results}{}% 11
-\BOOKMARK [2][-]{subsection.4.1}{expermental observations}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 13
-\BOOKMARK [1][-]{section*.13}{References}{}% 14
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.3}{Introduction}{}% 6
+\BOOKMARK [1][-]{section.4}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.5}{Introduction}{}% 8
+\BOOKMARK [1][-]{section.6}{Introduction}{}% 9
+\BOOKMARK [1][-]{section.7}{Introduction}{}% 10
+\BOOKMARK [1][-]{section.8}{Introduction}{}% 11
+\BOOKMARK [1][-]{section.9}{Introduction}{}% 12
+\BOOKMARK [1][-]{section.10}{Introduction}{}% 13
+\BOOKMARK [1][-]{section.11}{Introduction}{}% 14
+\BOOKMARK [1][-]{section.12}{Introduction}{}% 15
+\BOOKMARK [1][-]{section.13}{Introduction}{}% 16
+\BOOKMARK [1][-]{section.14}{Genetic Algorithms}{}% 17
+\BOOKMARK [2][-]{subsection.14.1}{The Intuition Behind GAs}{section.14}% 18
+\BOOKMARK [2][-]{subsection.14.2}{Typical GA Schema}{section.14}% 19
+\BOOKMARK [1][-]{section.15}{The Minimum Vertex Cover Problem}{}% 20
+\BOOKMARK [2][-]{subsection.15.1}{Related Algorithms}{section.15}% 21
+\BOOKMARK [2][-]{subsection.15.2}{GA for the mvcp}{section.15}% 22
+\BOOKMARK [1][-]{section.16}{Experimental Results}{}% 23
+\BOOKMARK [2][-]{subsection.16.1}{results comments}{section.16}% 24
+\BOOKMARK [1][-]{section.17}{Conclusion}{}% 25
+\BOOKMARK [1][-]{section*.13}{References}{}% 26
