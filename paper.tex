@@ -523,27 +523,31 @@ Recall that these graphs contain $n=3k+4 (k \geq 1)$ nodes distributed on three 
 They can be scaled up by choosing high values for $k$.
 A graph instance of the regular graph of size $n = 100 (k=32)$ is chosen.
 
+\begin{algorithm}
+\caption{Generate($n, d, k$)}
+\label{alg:gen}
 \begin{algorithmic}[1]
+\algnotext{EndFor}
+\algnotext{EndIf}
+
 
 \State randomly select $V' = \{i_1, \dots, i_k\} \subseteq V = \{1, \dots, n\}$
-\Comment{randomly select k different nodes}
-\For
+\State
+\Comment{randomly select k different nodes, these nodes will hold a potential mvc}
+\For{$i$}{$1$}{$n-1$}
+\For{$j$}{$i+1$}{$n$}
+\If{$(\text{Random(0, 1)} \leq d) \wedge (i \in V' \vee j \in V')$}
+\State $e_{ij} = 1$
+\Else
+\State $e_{ij} = 0$
+\EndIf
+\EndFor
+\EndFor
 
-\State $C \gets \{ \}$
-\Comment{$C$ contains the vertex cover being constructed}
-\State $E' \gets E$
-\While{$E' \neq \phi$}
-\State randomly choose $ \langle u, v \rangle \in E'$
-\label{alg:rand}
-\State $C \gets C \cup \{u, v\}$
-\State $E' \gets E' -
-\{ \langle x, y \rangle \in E' : x=u \vee y=v \vee x=v \vee y=u \}$
-\State \Comment{remove from $E'$ every edge incident on either $u$ or $v$}
-\EndWhile
-\State \Return $C$
 
 \end{algorithmic}
-\end{algorit
+\end{algorithm}
+
 For each of these graphs, a total of
 $N = 100$ independent runs of the genetic algorithm is performed.
 The results are summarized in table~\ref{fig:t1} for the best
