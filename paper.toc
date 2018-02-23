@@ -16,10 +16,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Typical GA Schema}{2}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Initialization}{2}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Selection}{2}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Crossover}{3}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Mutation}{3}{section*.8}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental Results}{4}{section.4}
+\contentsline {paragraph}{Problem instance:}{4}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{4}{section.5}
+\contentsline {paragraph}{Feasible solution:}{5}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{5}{section*.5}
+\contentsline {paragraph}{Objective function:}{5}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Optimal solution:}{5}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Related Algorithms}{6}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}GA for the mvcp}{7}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Experimental Results}{8}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{9}{section*.13}

@@ -13,6 +13,8 @@
 \usepackage[autostyle]{csquotes}
 \usepackage[]{biblatex}
 \usepackage{amsfonts}
+\usepackage{algorithm}
+\usepackage[end]{algpseudocode}
 
 % preferences
 \graphicspath{ {images/} }
@@ -27,6 +29,8 @@
 }
 \setlength{\parskip}{1em}
 \newcommand{\textem}[1]{\textbf{\textit{#1}}}
+\newtheorem{lemma}{Lemma}
+
 
 % title
 \title{Using Genetic Algorithms to Find Approximations for the Minimum Vertex Cover Problem}
@@ -131,7 +135,7 @@ tailored to the specific problem it is trying to solve.
 In this paper, we present an alternative approach that
 uses genetic algorithms as a generalized heuristic for solving NP-hard combinatorial optimization problems. The
 application of a genetic algorithm is demonstrated here for
-the \emph{minimum vertex cover} problem. These algorithms
+the \textit{minimum vertex cover} problem. These algorithms
 have been successfully applied to a broad range of problems. This wide range can be tackled by genetic algorithms
 mainly due to the fact that they work with an encoding of
 the domain rather than with the problem domain itself.
@@ -193,6 +197,8 @@ refer to figure~\ref{fig:ga} for a visual representation of this process.
 \label{fig:ga}
 \end{figure}
 
+
+\paragraph{Initialization}
 The population size (denoted as $u$) depends on the nature of the problem,
 but typically contains several hundreds or thousands of possible solutions.
 Often, the initial population is generated randomly, allowing the entire range
@@ -200,6 +206,7 @@ of possible solutions (the search space).
 Occasionally, the solutions may be `seeded' in areas where optimal solutions
 are likely to be found.
 
+\paragraph{Selection}
 Normally, selection in genetic algorithms is a probabilistic operator
 which uses the relative fitness 
 $ p_s \left( \vec{x_i} \right) = 
@@ -213,10 +220,11 @@ linearly transformed before calculating selection probabilities.
 This technique known as linear dynamic scaling is commonly used
 in genetic algorithms (see [13], pp. 123-124, or [14]).
 
+\paragraph{Crossover}
 The recombination (crossover) operator allows for the
 exchange of information between different individuals. The
 original one-point crossover [9] works on two parent individuals
-(which are randomly chosen from the population, see the next paragraph)
+(which are randomly chosen from the population, see the previous paragraph todo)
 by choosing a crossover point $ \chi \in \{1, \dots, n-1 \} $
 at random and exchanging all bits after the $ \chi^{\text{th}} $ one
 between both individuals. The crossover rate
@@ -229,6 +237,7 @@ whether to exchange it or not [19]. The strong mixing effect
 introduced by uniform crossover is sometimes helpful
 to overcome local optima.
 
+\paragraph{Mutation}
 Innovation, i.e. new information, is introduced into the
 population by means of mutation, which works by inverting
 bits with a small probability
@@ -238,24 +247,242 @@ in genetic algorithms [9], recent theoretical
 work gives strong evidence for an appropriate choice of a
 mutation rate $ p_m = 1/n $ on many problems [2; 12].
 
+For better understanding of figure~\ref{fig:ga}
+\begin{algorithm}
+\caption{Gentic Algorithm$\left( n, u, p_c, p_m, f \right)$}
+\label{alg:ga}
+
+\begin{algorithmic}[1]
+
+
+\State $ P \gets \{ \} $
+\Comment{$P$ contains the population}
+\Loop \ $u$ times
+\Comment{initialization}
+\State add a randomly generated binary vector of length $n$ to $P$
+\EndLoop
+
+\While{termination criterion is not fulfilled}
+\State $Q \gets \{ \}$
+\Comment{$Q$ will hold the new generation}
+\Loop \ $u/2$ times
+
+\State select $x, y$ from $P$ using proportional selection
+\Comment{selection}
+\State with probability $p_c$ perform crossover between $x, y$
+\Comment{crossover}
+\State for each bit in $x$ flip it with probability $p_m$
+\Comment{mutation}
+\State for each bit in $y$ flip it with probability $p_m$
+\Comment{mutation}
+\State add $x, y$ to $Q$
+
+\EndLoop
+
+\State $P \gets Q$
+\EndWhile
+
+
+\end{algorithmic}
+
+\end{algorithm}
 
 
 \section{The Minimum Vertex Cover Problem}
-Lorem \cite{einstein} ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The problem of finding a minimum vertex cover is a classical
+optimization problem in computer science and is a typical
+example of an NP-hard optimization problem that has an
+approximation algorithm.
+The mvcp of an undirected graph $G = (V, E)$ where $V$ is
+the set of vertices and $E$ denotes the set of edges, consists
+in finding the smallest subset $V' \subseteq V$ such that
+$\forall \langle i, j \rangle \in E$, we have $i \in V'$ or $j \in V'$ (or both).
+$V'$ is said to be a vertex cover of $G$. The following is a formal definition of
+the mvcp in which we make use of Stinson's terminology
+for combinatorial optimization problems [14]:
+
+{
+\setlength{\parskip}{0em}
+\paragraph{Problem instance:}
+A graph $G = (V, E)$, where $V = \{1, 2, \dots, n\}$
+is the set of vertices and $E \subseteq V \times V$ the
+set of edges. An edge between vertices $i, j$ is denoted
+by the pair $\langle i, j \rangle \in E$. We define the adjacency
+matrix $e_{ij}$ according to:
+\[
+e_{ij} =
+\begin{cases}
+1 & \text{if } \langle i, j \rangle \in E \\
+0 & \text{otherwise}
+\end{cases}
+\]
+especially, we have $e_{ii} = 0$
+
+\paragraph{Feasible solution:} A set $V' \subseteq V$ such that
+$\forall \langle i, j \rangle \in E, i \in V' \vee j \in V'$
+\paragraph{Objective function:} The size $|V'|$ of the vertex cover $V'$.
+\paragraph{Optimal solution:} a vertex cover $V'$ that minimizes $|V'|$.
+}
+
+an interesting property of the mvcp is that by
+solving it, we also have a solution for two other
+graph problems: the \textit{maximum independent set problem}%
+\footnote{%
+misp: given $G = (V, E)$, find the largest subset $V' \subseteq V$
+such that $\forall i, j \in V', \langle i, j \rangle \notin E$
+}
+and the \textit{maximum clique problem}%
+\footnote{%
+mcp: given $G = (V, E)$, find the largest subset $V' \subseteq V$
+such that $\forall i, j \in V', \langle i, j \rangle \in E$
+}
+The close relationship between these problems
+is characterized by the following lemma [6].
+
+\begin{lemma}
+\ \\[3mm]
+For any graph $G = (V, E)$ and $V' \subseteq V$, the following
+statements are equivalent:
+\begin{itemize}
+\vspace{-3mm}
+\setlength{\parskip}{0.5em}
+\item $V'$ is the minimum vertex cover of $G$.
+\item $V - V'$ is the maximum independent set in $G$.
+\item $V - V'$ is the maximum clique in $\bar{G} = (V, \bar{E})$, where \\
+$\bar{E}=\left\{ \langle i, j \rangle\in V \times V :
+\langle i, j \rangle \notin E \right\}$
+\end{itemize}
+\end{lemma}
+Consequently, one can obtain a solution of the maximum independent set
+problem by taking the complement of the solution to the minimum vertex cover
+problem. A solution to the maximum clique problem is obtained by
+taking the complement of the minimum vertex cover of $\bar{G}$.
+
+\subsection{Related Algorithms}
+Since we are interested in covering all the edges of the
+given graph by using as few nodes as possible, one might
+be tempted to use a greedy-based heuristic to tackle the
+mvcp. The algorithm consists in repeatedly selecting a
+vertex of highest degree (the node that covers as many
+of the remaining edges as possible), and removing all
+of its incident edges. This is not a good strategy as
+was demonstrated by Papadimitriou and Steiglitz ([10],
+p. 407). \\
+They considered regular graphs, each of which
+consists of three levels. The first two levels have the same
+number of nodes while the third level has two nodes less
+than the number of nodes found on the previous two
+levels. More precisely, each graph consists of $n = 3k + 4 (k \geq 1)$
+nodes; $k+2$ nodes on the first level, labeled $1, 2, \dots, k+2$;
+followed by $k+2$ nodes on the second level, labeled $k+3, \dots, 2k+4$;
+while the $k$ nodes of the third level are labeled $2k+5, \dots, 3k+4$.
+The regular graph for $k = 4$ can be found in figure~\ref{fig:g1}.
+A minimum vertex cover is obtained by choosing all
+the nodes of the second level, but the greedy strategy
+would start with the nodes of the third level, since these
+have highest degree. Consequently, the greedy strategy
+finds a solution of size $2k + 2$ (since it has to select $k + 2$
+nodes in addition to the nodes of the third level), while
+the optimal solution has size $k + 2$.
+However this algorithm is not totally useless. It may be shown that it always
+achieves the ratio $\Theta(\lg n)$, where $n$ is the number of vertices.
+That is, if $C^*(n)$ is the size of the optimal
+solution and $C(n)$ is the size of the solution found by the aforementioned
+algorithm. Then we have $\frac{C(n)}{C^*(n)} = \Theta(\lg n)$ [9], p-323.
+
+Fortunately, a simpler and better algorithm exists.
+The following simple algorithm is surprisingly the
+best approximation algorithm known for the mvcp ([9],
+p. 301).
+
+\begin{algorithm}
+\caption{vercov}
+\label{alg:vercov}
+\begin{algorithmic}[1]
+
+\State $C \gets \{ \}$
+\Comment{$C$ contains the vertex cover being constructed}
+\State $E' \gets E$
+\While{$E' \neq \phi$}
+\State randomly choose $ \langle u, v \rangle \in E'$
+\State $C \gets C \cup \{u, v\}$
+\State $E' \gets E' -
+\{ \langle x, y \rangle \in E' : x=u \vee y=v \vee x=v \vee y=u \}$
+\State \Comment{remove from $E'$ every edge incident on either $u$ or $v$}
+\EndWhile
+\State \Return $C$
+
+\end{algorithmic}
+\end{algorithm}
+
+
+This is a \textit{2-approximation algorithm}. Which means that
+the size of the vertex cover
+it returns is guaranteed to be no more than twice the
+size of an optimal vertex cover ([1], p. 968).
+More precisely, if $C^*$ is the size of the optimal
+solution and $C$ is the size of the solution returned by Algorithm~\ref{alg:vercov}
+then the inequality $C \leq 2C^*$ must hold (notice that here the approximation
+doesn't depend on the number of vertices $n$).
+
+\subsection{GA for the mvcp}
+In order to apply GA to solve the mvcp, a cover $V'$ is represented
+by a binary vector $\vec{x} = x_1x_2 \dots x_n$ where $x_i = 1$ if
+the $i^{\text{th}}$ node is in $V'$, and $x_i = 0$ if it is not.
+Using this representation, genetic algorithm is applied to minimize the following
+fitness function: [0] \\
+\begin{equation}
+\label{eq:f}
+\begin{split}
+f(\vec{x})	&= \sum_{i=1}^{n} \left( x_i+n \cdot (1-x_i) \cdot
+			   \sum_{j=i}^{n} (1-x_j) e_{ij} \right) \\
+ 			&= \sum_{i=1}^{n} x_i + n \cdot \sum_{i=1}^{n}
+			   \sum_{j=i}^{n} (1-x_i) \cdot (1-x_j) \cdot e_{ij}
+\end{split}
+\end{equation}
+The term $ \sum_{i=1}^{n} x_i $ of $ f(\vec{x}) $ determines the size of the
+potential vertex cover represented by $\vec{x}$, while the term
+$ n \cdot \sum_{i=1}^{n} \sum_{j=i}^{n} (1-x_i) \cdot (1-x_j) \cdot e_{ij} $
+penalizes sets $V'$ that
+are not covers by adding a penalty of magnitude $n$ for
+each edge $e_{ij}$ for which $i \notin V' \wedge j \notin V'$
+(note that $e_{ii}$ is previously defined to be zero).
+Consequently, any infeasible solution will have a fitness greater than
+or equal to $n$, and for any feasible solution the second term will
+drop to zero.
+This fitness function was developed according to the
+following design principles that are important for a
+successful penalty function approach [11 $||$ 13 $||$ 7]:
+
+\begin{itemize}
+\vspace{-3mm}
+
+\item Infeasible binary vectors are guaranteed to yield fitness
+values which are inferior to fitness values of
+the worst feasible solutions.
+
+\item The penalty should be graded, i.e., fitness values
+should improve as solutions approach feasible regions
+of the search space. In other words, the more edges a solution
+covers, the fitter it is. notice that this is guaranteed by the
+second term in equation~\ref{eq:f}, where for each uncovered edge
+the fitness is penalized with the value of $n$.
+\end{itemize}
+
+The experiments reported in section~\ref{sec:er} are performed
+by using a genetic algorithm with a population size of
+$u = 50$, a mutation rate $p_m = 1/n$, crossover rate
+$p_c = 0.6$, proportional selection, and two-point crossover.
+As reported in [2, 12], the latter is expected to perform
+better than the traditional one-point crossover.
 
 
 \section{Experimental Results}
-Lorem \cite{dirac} ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\label{sec:er}
+For the experimental tests, random graphs of size $n = 100$ with different
+edge densities $d$, $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$, are used.
+an edge density of d = 0:1 means that an edge is placed between two
+nodes with a probability of 0.1. 
 
 
 \section{Conclusion}
