@@ -8,64 +8,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Contents}{iii}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{List of Figures and Tables}{iv}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Introduction}{2}{section.2}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Introduction}{2}{section.3}
+\contentsline {section}{\numberline {2}Genetic Algorithms}{1}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Introduction}{2}{section.4}
+\contentsline {subsection}{\numberline {2.1}The Intuition Behind GAs}{1}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Introduction}{2}{section.5}
+\contentsline {subsection}{\numberline {2.2}Typical GA Schema}{2}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Introduction}{2}{section.6}
+\contentsline {paragraph}{Initialization}{2}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Introduction}{2}{section.7}
+\contentsline {paragraph}{Selection}{2}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Introduction}{2}{section.8}
+\contentsline {paragraph}{Crossover}{3}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Introduction}{2}{section.9}
+\contentsline {paragraph}{Mutation}{3}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Introduction}{2}{section.10}
+\contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Introduction}{2}{section.11}
+\contentsline {paragraph}{Problem instance:}{4}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Introduction}{2}{section.12}
+\contentsline {paragraph}{Feasible solution:}{4}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Introduction}{2}{section.13}
+\contentsline {paragraph}{Objective function:}{5}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Genetic Algorithms}{3}{section.14}
+\contentsline {paragraph}{Optimal solution:}{5}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}The Intuition Behind GAs}{3}{subsection.14.1}
+\contentsline {subsection}{\numberline {3.1}Related Algorithms}{5}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}Typical GA Schema}{4}{subsection.14.2}
+\contentsline {subsection}{\numberline {3.2}GA for the mvcp}{7}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Initialization}{4}{section*.5}
+\contentsline {section}{\numberline {4}Experimental Results}{8}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Selection}{5}{section*.6}
+\contentsline {subsection}{\numberline {4.1}results comments}{11}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Crossover}{5}{section*.7}
+\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Mutation}{5}{section*.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15}The Minimum Vertex Cover Problem}{5}{section.15}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Problem instance:}{6}{section*.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Feasible solution:}{6}{section*.10}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Objective function:}{6}{section*.11}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Optimal solution:}{6}{section*.12}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.1}Related Algorithms}{7}{subsection.15.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {15.2}GA for the mvcp}{9}{subsection.15.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16}Experimental Results}{10}{section.16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {16.1}results comments}{14}{subsection.16.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {17}Conclusion}{15}{section.17}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{16}{section*.13}
+\contentsline {section}{References}{14}{section*.21}
