@@ -8,7 +8,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Contents}{iii}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures and Tables}{iv}{section*.5}
+\contentsline {section}{List of Figures}{v}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{v}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{v}{section*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \defcounter {refsection}{0}\relax 
@@ -18,23 +22,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Typical GA Schema}{2}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Initialization}{2}{section*.8}
+\contentsline {paragraph}{Initialization}{2}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Selection}{2}{section*.9}
+\contentsline {paragraph}{Selection}{2}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Crossover}{3}{section*.10}
+\contentsline {paragraph}{Crossover}{3}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Mutation}{3}{section*.11}
+\contentsline {paragraph}{Mutation}{3}{section*.15}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Problem instance:}{4}{section*.12}
+\contentsline {paragraph}{Problem instance:}{4}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Feasible solution:}{4}{section*.13}
+\contentsline {paragraph}{Feasible solution:}{4}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Objective function:}{5}{section*.14}
+\contentsline {paragraph}{Objective function:}{5}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Optimal solution:}{5}{section*.15}
+\contentsline {paragraph}{Optimal solution:}{5}{section*.19}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Related Algorithms}{5}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
@@ -46,4 +50,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Conclusion}{13}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{14}{section*.21}
+\contentsline {section}{References}{14}{section*.25}
