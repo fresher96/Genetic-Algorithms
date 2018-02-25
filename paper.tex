@@ -16,6 +16,7 @@
 \usepackage{algorithm}
 \usepackage[end]{algpseudocode}
 \usepackage{caption}
+\usepackage{setspace}
 
 % preferences
 \graphicspath{ {images/} }
@@ -75,12 +76,16 @@ Keywords: genetic algorithms, NP-complete, combinatorial optimization, non-deter
 
 \vspace{5mm}
 \begin{center}
-\begin{align*}
-\text{Author: }					& \textit{Farouk Hjabo} \\
-\text{Academic Supervisor: }	& \textit{Dr. Said Desouki} \\
-\text{General Supervisor: }		& \textit{Dr. Kadan Aljoumaa} \\
-\text{Langauge Supervisor: }	& \textit{Mr. Fahmi Alammareen} \\
-\end{align*}
+\begin{onehalfspacing}
+
+\begin{tabular}{r l}
+Author:					&	\textit{Farouk Hjabo} \\
+Academic Supervisor:	&	\textit{Dr. Said Desouki} \\
+General Supervisor:		&	\textit{Dr. Kadan Aljoumaa} \\
+Langauge Supervisor:	&	\textit{Mr. Fahmi Alammareen} \\
+\end{tabular}
+
+\end{onehalfspacing}
 \end{center}
 
 \vfill
@@ -129,14 +134,21 @@ to change.''
 \listoftables
 
 \phantomsection\addcontentsline{toc}{section}{List of Tables}
-\section*{abbrevs}  % Set the left side page header to "Abbreviations"
-\begin{center}
-\begin{tabular}{ l c } 
- GA & Genetic Algorithm \\ 
- cell4 & cell5 \\ 
- cell7 & cell8
+\section*{Abbreviations}  % Set the left side page header to "Abbreviations"
+\begin{onehalfspacing}
+\begin{tabular}{l l}
+
+\indent
+GA		&	\textbf{G}enetic \textbf{A}lgorithm \\
+
+\indent
+mvc		&	\textbf{M}inimum \textbf{V}ertex \textbf{C}over \\
+
+\indent
+mvcp	&	\textbf{M}inimum \textbf{V}ertex \textbf{C}over \textbf{P}roblem \\
+
 \end{tabular}
-\end{center}
+\end{onehalfspacing}
 
 \pagebreak
 
@@ -693,7 +705,7 @@ known traditional heuristic, the vercov algorithm. These, in addition to other g
 problems such as the subset sum [7], minimum tardy
 task [7], and multiple knapsack problems [8], give strong
 evidence that genetic algorithms can yield good solutions for a wide range of hard combinatorial optimization problems for which solutions can be represented by
-binary strings.
+binary strings. \cite{mvcp-back}
 
 
 \pagebreak
@@ -706,5 +718,4 @@ binary strings.
 
 % end of document
 \end{document}
-
 

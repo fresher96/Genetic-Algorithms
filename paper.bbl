@@ -51,6 +51,39 @@
       \verb https://books.google.com/books?id=3%5C_RQAAAAMAAJ
       \endverb
     \endentry
+    \entry{mvcp-back}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=672ab6a0e6f8f11ac4d8553df6ac8c87}{%
+           family={Khuri},
+           familyi={K\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ea44c67b3e5cc5883e53f6120d1f742b}{%
+           family={B{ä}ck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Saarbr{ü}cken, Germany}%
+      }
+      \strng{namehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{fullhash}{2749a2012276e471c5cff6414e04e384}
+      \strng{bibnamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authorbibnamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authornamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authorfullhash}{2749a2012276e471c5cff6414e04e384}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Genetic Algorithms within the Framework of Evolutionary Computation--Proc. of the KI-94 Workshop}
+      \field{note}{Available at: \url{https://www.researchgate.net/publication/2581134_An_Evolutionary_Heuristic_for_the_Minimum_Vertex_Cover_Problem/overview}}
+      \field{title}{An evolutionary heuristic for the minimum vertex cover problem}
+      \field{year}{1994}
+      \field{pages}{86\bibrangedash 90}
+      \range{pages}{5}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
