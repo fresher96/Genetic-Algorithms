@@ -19,7 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{goldberg1989genetic}{book}{}
+    \entry{coley}{book}{}
+      \name{author}{1}{}{%
+        {{hash=229cb3480391bf3bddec2ce7f2262b7c}{%
+           family={Coley},
+           familyi={C\bibinitperiod},
+           given={D.A.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{fullhash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{bibnamehash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{authorbibnamehash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{authornamehash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{authorfullhash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9789810236021}
+      \field{title}{An Introduction to Genetic Algorithms for Scientists and Engineers}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=-D568prVv0QC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=-D568prVv0QC
+      \endverb
+    \endentry
+    \entry{goldberg}{book}{}
       \name{author}{1}{}{%
         {{hash=428734fea68b25fcf00cb7954533d74e}{%
            family={Goldberg},
@@ -51,28 +82,52 @@
       \verb https://books.google.com/books?id=3%5C_RQAAAAMAAJ
       \endverb
     \endentry
+    \entry{holland}{book}{}
+      \name{author}{1}{}{%
+        {{hash=902f8dcd7bf37f629abdc901615bc843}{%
+           family={Holland},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima Henry},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{902f8dcd7bf37f629abdc901615bc843}
+      \strng{fullhash}{902f8dcd7bf37f629abdc901615bc843}
+      \strng{bibnamehash}{902f8dcd7bf37f629abdc901615bc843}
+      \strng{authorbibnamehash}{902f8dcd7bf37f629abdc901615bc843}
+      \strng{authornamehash}{902f8dcd7bf37f629abdc901615bc843}
+      \strng{authorfullhash}{902f8dcd7bf37f629abdc901615bc843}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Adaptation in natural and artificial systems: an introductory analysis with applications to biology, control, and artificial intelligence}
+      \field{year}{1992}
+    \endentry
     \entry{mvcp-back}{inproceedings}{}
       \name{author}{2}{}{%
-        {{hash=672ab6a0e6f8f11ac4d8553df6ac8c87}{%
+        {{hash=22144f589649263d754e2657420bbf83}{%
            family={Khuri},
            familyi={K\bibinitperiod},
-           given={Sami},
+           given={S.},
            giveni={S\bibinitperiod}}}%
-        {{hash=ea44c67b3e5cc5883e53f6120d1f742b}{%
+        {{hash=3912aaaf26efd7b835f044641afc1b14}{%
            family={B{ä}ck},
            familyi={B\bibinitperiod},
-           given={Thomas},
+           given={Th.},
            giveni={T\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {Saarbr{ü}cken, Germany}%
       }
-      \strng{namehash}{2749a2012276e471c5cff6414e04e384}
-      \strng{fullhash}{2749a2012276e471c5cff6414e04e384}
-      \strng{bibnamehash}{2749a2012276e471c5cff6414e04e384}
-      \strng{authorbibnamehash}{2749a2012276e471c5cff6414e04e384}
-      \strng{authornamehash}{2749a2012276e471c5cff6414e04e384}
-      \strng{authorfullhash}{2749a2012276e471c5cff6414e04e384}
+      \strng{namehash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{fullhash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{bibnamehash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{authorbibnamehash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{authornamehash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{authorfullhash}{66ac89fa9259ebe36d429b3049504135}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}

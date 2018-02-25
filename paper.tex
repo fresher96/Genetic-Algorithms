@@ -24,17 +24,18 @@
 \hypersetup{colorlinks=true, allcolors=black}
 \addbibresource{references.bib}
 \ExecuteBibliographyOptions{
-	giveninits=true,
+	giveninits=false,
 	isbn=false,
 	doi=false,
 	url=false
 }
 \setlength{\parskip}{1em}
-\newcommand{\textem}[1]{\textbf{\textit{#1}}}
+\newcommand{\textem}[1]{\textbf{\emph{#1}}}
 \newtheorem{lemma}{Lemma}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \algnewcommand\algorithmicto{\textbf{to}}
 \algrenewtext{For}[3]%
+{\algorithmicfor\ #1 = #2 \algorithmicto\ #3 \algorithmicdo}
 
 
 % title
@@ -115,7 +116,7 @@ to change.''
 }
 \begin{flushright}
 \setlength{\parskip}{0em}
-\rm --- Charles Darwin
+--- Charles Darwin
 \end{flushright}
 
 \pagebreak
@@ -127,13 +128,13 @@ to change.''
 \pagebreak
 
 % List of Figures and Tables
-\cleardoublepage\phantomsection\addcontentsline{toc}{section}{List of Figures}
+\cleardoublepage\phantomsection\addcontentsline{toc}{subsection}{List of Figures}
 \listoffigures
 
-\phantomsection\addcontentsline{toc}{section}{List of Tables}
+\phantomsection\addcontentsline{toc}{subsection}{List of Tables}
 \listoftables
 
-\phantomsection\addcontentsline{toc}{section}{List of Tables}
+\phantomsection\addcontentsline{toc}{subsection}{Abbreviations}
 \section*{Abbreviations}  % Set the left side page header to "Abbreviations"
 \begin{onehalfspacing}
 \begin{tabular}{l l}
@@ -176,32 +177,48 @@ the domain rather than with the problem domain itself.
 
 \section{Genetic Algorithms}
 \subsection{The Intuition Behind GAs}
-Genetic Algorithms (GAs)~\cite{goldberg1989genetic} are population based
+Genetic Algorithms (GAs) \cite{coley, goldberg} are population based
 search algorithms, where by repeated use of genetic operations,
 such as \textem{mutation}, \textem{selection}, \textem{crossover}, etc...
 Successive new generations of better populations in the direction of
-search objectives are created. They are inspired by Darwinian principles
-based on natural evolution. In other words, the main idea behind genetic
-algorithms is that only the \textem{fittest} individuals will survive.\\
+search objectives are created.
+They are inspired by Darwinian principles
+based on natural evolution.
+In other words, the main idea behind genetic
+algorithms is that only the \textem{fittest} individuals will survive
+among generations of evolution.
+
 Main advantage of genetic algorithms is that they ideally do not make
 any assumption about the underlying problem, hence they are suitable to tackle
 a wide range of diverse problems in
 engineering, art, biology, economics, marketing, genetics,
 operations research, robotics, social sciences, physics, politics, chemistry,
-etc...
+etc... \cite[ch.~6]{coley}
 
 \noindent
-So what is a GA? A typical GA consists of the following:
+So what is a GA? A typical GA consists of the following~\cite[ch.~1]{coley}:
 \vspace{-5mm}
 \begin{enumerate}
 \setlength{\parskip}{0em}
-\item a number, or \textem{population}, of candidate solutions to the problem.
-\item a way of calculating how good or bad the individual solutions within the
-population are. i.e. how \textem{fit} an individual is?
-\item a method for mixing fragments of the better solutions to form new, on
-average even better solutions. Which permits the population to \textem{evolve} naturally.
-\item a \textem{mutation} operator to avoid permanent loss of diversity within the
-solutions. This allows introducing new information in the population.
+
+\item
+a number, or \textem{population}, of candidate solutions to the problem.
+
+\item
+a way of calculating how good or bad the individual solutions within the
+population are.
+i.e. how \textem{fit} an individual is?
+
+\item
+a method for mixing fragments of the better solutions to form new, on
+average even better solutions.
+Which permits the population to \textem{evolve} naturally.
+
+\item
+a \textem{mutation} operator to avoid permanent loss of diversity within the
+solutions.
+This allows introducing new information in the population.
+
 \end{enumerate}
 
 \subsection{Typical GA Schema}
@@ -210,26 +227,28 @@ of individuals, each of which represents a search point in the space
 of potential solutions of a given optimization problem.
 In case of a canonical genetic algorithm, each individual is a binary vector
 $ \vec{x} = ( x_1, \dots, x_n ) \in \{0, 1\}^n $
-of fixed length $n$. The fitness function
+of fixed length $n$.
+The fitness function
 $ f: \{0, 1\}^n \rightarrow \mathbb{R} $
 provides a quality measure which is used by the selection procedure to direct
 the search towards regions of the search space where the
-average fitness of the population increases. The recombination operator
-allows for the exchange of information between different individuals, and
-mutation introduces innovation into the population. \\
+average fitness of the population increases.
+The recombination operator
+allows for the exchange of information between different individuals,
+and mutation introduces innovation into the population.
 This cycle is repeated until a termination criterion is fulfilled.
 In most cases, the algorithm is terminated after a certain number of
 iterations of the basic cycle or when a satisfactory fitness
-level has been reached.
-refer to figure~\ref{fig:ga} for a visual representation of this process.
+level has been reached.\\
+Refer to figure~\ref{fig:ga} for a visual representation of this process,
+and refer to algorithm~\ref{alg:ga} for a more concise description.
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{ga}
-\caption{general schema for genetic algorithms}
+\caption{General schema for genetic algorithms}
 \label{fig:ga}
 \end{figure}
-
 
 \paragraph{Initialization}
 The population size (denoted as $u$) depends on the nature of the problem,
@@ -241,48 +260,53 @@ are likely to be found.
 
 \paragraph{Selection}
 Normally, selection in genetic algorithms is a probabilistic operator
-which uses the relative fitness 
+which uses the relative fitness
 $ p_s \left( \vec{x_i} \right) = 
 f \left( \vec{x_i} \right) / \sum_{j=1}^uf \left( \vec{x_j} \right) $
-to serve as selection probabilities
-($u$ denotes the population size). This selection operator
-is called proportional selection. If the problem under
-consideration is a minimization one, or if the fitness
-function can take negative values, then $ f \left( \vec{x_i} \right) $ has to be
+to serve as selection probabilities ($u$ denotes the population size).
+This selection operator is called proportional selection.
+It is commonly used; as intuitively the more fit a solution is the more we
+want it to affect the next generations.\\
+If the problem under consideration is a minimization one,
+or if the fitness function can take negative values,
+then $ f \left( \vec{x_i} \right) $ has to be
 linearly transformed before calculating selection probabilities.
 This technique known as linear dynamic scaling is commonly used
-in genetic algorithms (see [13], pp. 123-124, or [14]).
+in genetic algorithms \cite[pp.~123--124]{goldberg}.
 
 \paragraph{Crossover}
 The recombination (crossover) operator allows for the
-exchange of information between different individuals. The
-original one-point crossover [9] works on two parent individuals
-(which are randomly chosen from the population, see the previous paragraph todo)
+exchange of information between different individuals.
+The original one-point crossover \cite{holland} works on two parent individuals
 by choosing a crossover point $ \chi \in \{1, \dots, n-1 \} $
 at random and exchanging all bits after the $ \chi^{\text{th}} $ one
-between both individuals. The crossover rate
-$ p_c \ (\text{e.g. } p_c \approx 0.6) $
-determines the probability to undergo crossover (see todo for more details).
+between both individuals.
+Therefore, two new off-springs will be formed.\\
+For example, if the two parents were encoded as $(111, 000)$ and we chose $\chi = 2$
+then the new two off-springs will be $(110, 001)$.
+The crossover rate $ p_c \ (\text{e.g. } p_c \approx 0.6) $
+determines the probability to undergo crossover (see algorithm~\ref{alg:ga} line~\ref{alg:crossover}),
+this allows the two parents to be present in the next generation; as crossover is not mandatory.
+Moreover, the value of $p_c$ indicates the ratio of new off-springs in the next generation.\\
 The crossover operator can be extended to a generalized
-multi-point crossover [10] or even to uniform crossover,
-where an it is randomly decided for each bit
-whether to exchange it or not [19]. The strong mixing effect
-introduced by uniform crossover is sometimes helpful
-to overcome local optima.
+multi-point crossover or even to uniform crossover,
+where it is randomly decided for each bit
+whether to exchange it or not.
+The strong mixing effect introduced by uniform crossover
+is sometimes helpful to overcome local optima.
 
 \paragraph{Mutation}
-Innovation, i.e. new information, is introduced into the
+Innovation (new information) is introduced into the
 population by means of mutation, which works by inverting
-bits with a small probability
-$ p_m \ (\text{e.g. } p_m \approx 0.001) $
+bits with a small probability $p_m \ (\text{e.g. } p_m \approx 0.001)$
+(see algorithm~\ref{alg:ga} lines~\ref{alg:m1}~\ref{alg:m2} for clarity).
 Though mutation is often interpreted as a rather unimportant operator
-in genetic algorithms [9], recent theoretical
+in genetic algorithms \cite{holland}, recent theoretical
 work gives strong evidence for an appropriate choice of a
-mutation rate $ p_m = 1/n $ on many problems [2; 12].
+mutation rate $ p_m = 1/n $ on many problems tocite{2, 12 misp}.
 
-For better understanding of figure~\ref{fig:ga}
 \begin{algorithm}
-\caption{Gentic Algorithm$\left( n, u, p_c, p_m, f \right)$}
+\caption{GenticAlgorithm$\left( n, u, p_c, p_m, f \right)$}
 \label{alg:ga}
 
 \begin{algorithmic}[1]
@@ -304,10 +328,13 @@ For better understanding of figure~\ref{fig:ga}
 \Comment{selection}
 \State with probability $p_c$ perform crossover between $x, y$
 \Comment{crossover}
+\label{alg:crossover}
 \State for each bit in $x$ flip it with probability $p_m$
 \Comment{mutation}
+\label{alg:m1}
 \State for each bit in $y$ flip it with probability $p_m$
 \Comment{mutation}
+\label{alg:m2}
 \State add $x, y$ to $Q$
 
 \EndLoop
@@ -321,27 +348,31 @@ For better understanding of figure~\ref{fig:ga}
 \end{algorithm}
 
 
+
 \section{The Minimum Vertex Cover Problem}
 The problem of finding a minimum vertex cover is a classical
 optimization problem in computer science and is a typical
-example of an NP-hard optimization problem that has an
-approximation algorithm.
+example of an NP-complete optimization problem tocite{wolfram}
+that has approximation algorithms.
 The mvcp of an undirected graph $G = (V, E)$ where $V$ is
-the set of vertices and $E$ denotes the set of edges, consists
-in finding the smallest subset $V' \subseteq V$ such that
+the set of vertices and $E$ denotes the set of edges,
+consists in finding the smallest subset $V' \subseteq V$ such that
 $\forall \langle i, j \rangle \in E$, we have $i \in V'$ or $j \in V'$ (or both).
-$V'$ is said to be a vertex cover of $G$. The following is a formal definition of
+$V'$ is said to be a vertex cover of $G$.
+
+The following is a formal definition of
 the mvcp in which we make use of Stinson's terminology
-for combinatorial optimization problems [14]:
+for combinatorial optimization problems tocite{14 mvcp}:
 
 {
 \setlength{\parskip}{0em}
 \paragraph{Problem instance:}
 A graph $G = (V, E)$, where $V = \{1, 2, \dots, n\}$
 is the set of vertices and $E \subseteq V \times V$ the
-set of edges. An edge between vertices $i, j$ is denoted
-by the pair $\langle i, j \rangle \in E$. We define the adjacency
-matrix $e_{ij}$ according to:
+set of edges.
+An edge between vertices $i, j$ is denoted
+by the pair $\langle i, j \rangle \in E$.
+We define the adjacency matrix $e_{ij}$ according to:
 \[
 e_{ij} =
 \begin{cases}
@@ -349,7 +380,7 @@ e_{ij} =
 0 & \text{otherwise}
 \end{cases}
 \]
-especially, we have $e_{ii} = 0$
+On particular, we have $e_{ii} = 0$.
 
 \paragraph{Feasible solution:} A set $V' \subseteq V$ such that
 $\forall \langle i, j \rangle \in E, i \in V' \vee j \in V'$
@@ -357,21 +388,16 @@ $\forall \langle i, j \rangle \in E, i \in V' \vee j \in V'$
 \paragraph{Optimal solution:} a vertex cover $V'$ that minimizes $|V'|$.
 }
 
-an interesting property of the mvcp is that by
+An interesting property of the mvcp is that by
 solving it, we also have a solution for two other
-graph problems: the \textit{maximum independent set problem}%
-\footnote{%
-misp: given $G = (V, E)$, find the largest subset $V' \subseteq V$
-such that $\forall i, j \in V', \langle i, j \rangle \notin E$
-}
-and the \textit{maximum clique problem}%
-\footnote{%
-mcp: given $G = (V, E)$, find the largest subset $V' \subseteq V$
-such that $\forall i, j \in V', \langle i, j \rangle \in E$
-}
-The close relationship between these problems
-is characterized by the following lemma [6].
-
+graph problems: the \textit{maximum independent set problem}
+(given $G = (V, E)$, find the largest subset $V' \subseteq V$
+such that $\forall i, j \in V', \langle i, j \rangle \notin E$)
+and the \textit{maximum clique problem}
+(given $G = (V, E)$, find the largest subset $V' \subseteq V$
+such that $\forall i, j \in V', \langle i, j \rangle \in E$)
+The close relationship between these problems is characterized
+by the following lemma tocite{6 misp}.
 \begin{lemma}
 \ \\[3mm]
 For any graph $G = (V, E)$ and $V' \subseteq V$, the following
@@ -381,11 +407,13 @@ statements are equivalent:
 \setlength{\parskip}{0.5em}
 \item $V'$ is the minimum vertex cover of $G$.
 \item $V - V'$ is the maximum independent set in $G$.
-\item $V - V'$ is the maximum clique in $\bar{G} = (V, \bar{E})$, where \\
+\item $V - V'$ is the maximum clique in $\bar{G} = (V, \bar{E})$,\\[1mm]
+where
 $\bar{E}=\left\{ \langle i, j \rangle\in V \times V :
 \langle i, j \rangle \notin E \right\}$
 \end{itemize}
 \end{lemma}
+
 Consequently, one can obtain a solution of the maximum independent set
 problem by taking the complement of the solution to the minimum vertex cover
 problem. A solution to the maximum clique problem is obtained by
@@ -396,17 +424,23 @@ taking the complement of the minimum vertex cover of $\bar{G}$.
 Since we are interested in covering all the edges of the
 given graph by using as few nodes as possible, one might
 be tempted to use a greedy-based heuristic to tackle the
-mvcp. The algorithm consists in repeatedly selecting a
+mvcp.
+The algorithm consists in repeatedly selecting a
 vertex of highest degree (the node that covers as many
 of the remaining edges as possible), and removing all
-of its incident edges. This is not a good strategy as
-was demonstrated by Papadimitriou and Steiglitz ([10],
-p. 407). \\
-They considered regular graphs, each of which
-consists of three levels. The first two levels have the same
+of its incident edges.
+This is not a good strategy as was demonstrated
+by Papadimitriou and Steiglitz tocite{10 p. 407 mvcp}.
+
+They considered regular graphs\footnote{%
+by regular graphs we don't refer to the definition where
+each vertex has the same degree.
+}, each of which consists of three levels.
+The first two levels have the same
 number of nodes while the third level has two nodes less
 than the number of nodes found on the previous two
-levels. More precisely, each graph consists of $n = 3k + 4 (k \geq 1)$
+levels.
+More precisely, each graph consists of $n = 3k + 4 \ (k \geq 1)$
 nodes; $k+2$ nodes on the first level, labeled $1, 2, \dots, k+2$;
 followed by $k+2$ nodes on the second level, labeled $k+3, \dots, 2k+4$;
 while the $k$ nodes of the third level are labeled $2k+5, \dots, 3k+4$.
@@ -418,6 +452,7 @@ have highest degree. Consequently, the greedy strategy
 finds a solution of size $2k + 2$ (since it has to select $k + 2$
 nodes in addition to the nodes of the third level), while
 the optimal solution has size $k + 2$.
+
 However this algorithm is not totally useless. It may be shown that it always
 achieves the ratio $\Theta(\lg n)$\footnote{$f(n) = \Theta(g(n)) \iff
 \exists \alpha, \beta, n_0 : \forall n \geq n_0, \ 
@@ -425,21 +460,22 @@ achieves the ratio $\Theta(\lg n)$\footnote{$f(n) = \Theta(g(n)) \iff
 $},
 where $n$ is the number of vertices.
 That is, if $C^*(n)$ is the size of the optimal
-solution and $C(n)$ is the size of the solution found by the aforementioned
-algorithm. Then we have $\frac{C(n)}{C^*(n)} = \Theta(\lg n)$ [9], p-323.
+solution and $C(n)$ is the size of the solution found by the greedy
+algorithm. Then we have $\frac{C(n)}{C^*(n)} = \Theta(\lg n)$ tocite{9 p. 323 mvc}.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1\textwidth]{ps}
-\caption{Construction of the regular graph after Papadimitriou
+\includegraphics[width=0.5\textwidth]{ps}
+\caption[The regular graph after Papadimitriou
+and Steiglitz]{Construction of the regular graph after Papadimitriou
 and Steiglitz with $k=3$.}
 \label{fig:ps}
 \end{figure}
 
 Fortunately, a simpler and better algorithm exists.
 The following simple algorithm is surprisingly the
-best approximation algorithm known for the mvcp ([9],
-p. 301).
+best approximation algorithm known for the mvcp
+tocite{9 p.~301 mvcp}.
 
 \begin{algorithm}
 \caption{vercov($G = (V, E)$)}
@@ -462,23 +498,22 @@ p. 301).
 \end{algorithmic}
 \end{algorithm}
 
-
 This is a \textit{2-approximation algorithm}. Which means that
 the size of the vertex cover
 it returns is guaranteed to be no more than twice the
-size of an optimal vertex cover ([1], p. 968).
+size of an optimal vertex cover tocite{[1], p. 968 mvcp}.
 More precisely, if $C^*$ is the size of the optimal
 solution and $C$ is the size of the solution returned by algorithm~\ref{alg:vercov}
 then the inequality $C \leq 2C^*$ must hold (notice that here the approximation
-doesn't depend on the number of vertices $n$).
+doesn't depend on the number of vertices).
 
 \subsection{GA for the mvcp}
 \label{sec:GAmvcp}
-In order to apply GA to solve the mvcp, a cover $V'$ is represented
+In order to apply genetic algorithm to solve the mvcp, a cover $V'$ is represented
 by a binary vector $\vec{x} = x_1x_2 \dots x_n$ where $x_i = 1$ if
 the $i^{\text{th}}$ node is in $V'$, and $x_i = 0$ if it is not.
 Using this representation, genetic algorithm is applied to minimize the following
-fitness function: [0] \\
+fitness function~\cite{mvcp-back}:
 \begin{equation}
 \label{eq:f}
 \begin{split}
@@ -488,6 +523,7 @@ f(\vec{x})	&= \sum_{i=1}^{n} \left( x_i+n \cdot (1-x_i) \cdot
 			   \sum_{j=i}^{n} (1-x_i) \cdot (1-x_j) \cdot e_{ij}
 \end{split}
 \end{equation}
+
 The term $ \sum_{i=1}^{n} x_i $ of $ f(\vec{x}) $ determines the size of the
 potential vertex cover represented by $\vec{x}$, while the term
 $ n \cdot \sum_{i=1}^{n} \sum_{j=i}^{n} (1-x_i) \cdot (1-x_j) \cdot e_{ij} $
@@ -496,14 +532,14 @@ are not covers by adding a penalty of magnitude $n$ for
 each edge $e_{ij}$ for which $i \notin V' \wedge j \notin V'$
 (note that $e_{ii}$ is previously defined to be zero).
 Consequently, any infeasible solution will have a fitness greater than
-or equal to $n$, and for any feasible solution the second term will
-drop to zero.
+or equal to $n$. And for any feasible solution the second term will
+drop to zero, making the fitness value of the worst feasible solution at most $n$.
+
 This fitness function was developed according to the
 following design principles that are important for a
-successful penalty function approach [11 $||$ 13 $||$ 7]:
-
+successful penalty function approach tocite{7,11 mvcp}:
 \begin{itemize}
-\vspace{-3mm}
+\vspace{-4mm}
 
 \item Infeasible binary vectors are guaranteed to yield fitness
 values which are inferior to fitness values of
@@ -519,41 +555,43 @@ the fitness is penalized with the value of $n$.
 
 The experiments reported in section~\ref{sec:er} are performed
 by using a genetic algorithm with a population size of
-$u = 50$, a mutation rate $p_m = 1/n$, crossover rate
-$p_c = 0.6$, proportional selection, and two-point crossover.
-As reported in [2, 12], the latter is expected to perform
+$u = 50$, mutation rate $p_m = 1/n$, crossover rate
+$p_c = 0.6$, proportional selection, and two-point crossover \cite{mvcp-back}.
+As reported in tocite{2, 12 mvcp}, the latter is expected to perform
 better than the traditional one-point crossover.
-The termination criterion is specified in section~\ref{sec:er}.
+A bound for the total number
+of fitness function evaluations is set as the termination
+criterion, see section~\ref{sec:er} for details.
 
 
 \section{Experimental Results}
 \label{sec:er}
 For the experimental tests,
-the genetic algorithm software package GENEsYs is used [1]misp.
-This implementation is based on the widely used GENESIS software by Grefenstette
-(see [3], pp. 374-377 misp), but allows for more 
-flexibility concerning genetic operators and data monitoring.
-The parameter settings for our experiments are
+the genetic algorithm software package GENEsYs is used tocite{[1] misp}.
+This implementation is based on the widely used GENESIS software by Grefenstette tocite{3, pp. 374-377 misp},
+but allows for more  flexibility concerning genetic operators and data monitoring.
+The parameter settings for the experiments are
 given in section~\ref{sec:GAmvcp}.
 
-
-Multiple problem instances are used to demonstrate the applicability of GAs to tackle the mvcp
+\paragraph{Test Set 1:}
+Multiple problem instances are used to demonstrate the applicability of GAs to tackle the mvcp.
 The results in table~\ref{tbl:t1}
 and table~\ref{tbl:t2} correspond to the first test set, which consists of
 five random graphs of size $n = 100$ with different
-edge densities $d$, $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$, are used.
+edge densities $d$.
+Densities $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$ are used respectively.
 An edge density of $d = 0.1$ means that an edge is placed between two
 nodes with a probability of 0.1.
-Moreover we construct the graphs in a way that guarantees an optimum of quality 55
-(we set $k = 55$ in algorithm~\ref{alg:gen}).
-In addition to the regular graphs introduced by
-Papadimitriou and Steiglitz and described in section~\ref{sec:ra}.
-Recall that these graphs contain $n=3k+4 (k \geq 1)$ nodes distributed on three levels.
+Moreover, we construct the graphs in a way that guarantees an optimum of quality 55 \cite{mvcp-back}.
+i.e. we use algorithm~\ref{alg:gen} with $k = 55$ to generate random graphs.
+In addition, the regular graphs introduced by
+Papadimitriou and Steiglitz and described in section~\ref{sec:ra} are used.
+Recall that these graphs contain $n=3k+4 \ (k \geq 1)$ nodes distributed on three levels.
 They can be scaled up by choosing high values for $k$.
-A graph instance of the regular graph of size $n = 100 (k=32)$ is chosen.
+A graph instance of the regular graph of size $n = 100 \  (k=32)$ is chosen.
 
 \begin{algorithm}
-\caption{Generate$(n, d, k)$}
+\caption{GenerateRandomGraph$(n, d, k)$}
 \label{alg:gen}
 \begin{algorithmic}[1]
 \algnotext{EndFor}
@@ -705,7 +743,7 @@ known traditional heuristic, the vercov algorithm. These, in addition to other g
 problems such as the subset sum [7], minimum tardy
 task [7], and multiple knapsack problems [8], give strong
 evidence that genetic algorithms can yield good solutions for a wide range of hard combinatorial optimization problems for which solutions can be represented by
-binary strings. \cite{mvcp-back}
+binary strings. \cite[p.~400, p.]{mvcp-back, goldberg} \cite{coley}
 
 
 \pagebreak
