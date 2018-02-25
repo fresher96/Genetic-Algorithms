@@ -508,6 +508,7 @@ then the inequality $C \leq 2C^*$ must hold (notice that here the approximation
 doesn't depend on the number of vertices).
 
 \subsection{GA for the mvcp}
+\section{Experiments}
 \label{sec:GAmvcp}
 In order to apply genetic algorithm to solve the mvcp, a cover $V'$ is represented
 by a binary vector $\vec{x} = x_1x_2 \dots x_n$ where $x_i = 1$ if
@@ -564,7 +565,7 @@ of fitness function evaluations is set as the termination
 criterion, see section~\ref{sec:er} for details.
 
 
-\section{Experimental Results}
+\subsection{Experimental Results}
 \label{sec:er}
 For the experimental tests,
 the genetic algorithm software package GENEsYs is used tocite{[1] misp}.
@@ -576,14 +577,14 @@ given in section~\ref{sec:GAmvcp}.
 \paragraph{Test Set 1:}
 Multiple problem instances are used to demonstrate the applicability of GAs to tackle the mvcp.
 The results in table~\ref{tbl:t1}
-and table~\ref{tbl:t2} correspond to the first test set, which consists of
+and table~\ref{tbl:t2} correspond to the test set 1, which consists of
 five random graphs of size $n = 100$ with different
 edge densities $d$.
 Densities $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$ are used respectively.
 An edge density of $d = 0.1$ means that an edge is placed between two
 nodes with a probability of 0.1.
 Moreover, we construct the graphs in a way that guarantees an optimum of quality 55 \cite{mvcp-back}.
-i.e. we use algorithm~\ref{alg:gen} with $k = 55$ to generate random graphs.
+i.e. we use algorithm~\ref{alg:gen} with $k = 55$ to generate random graphs.\\
 In addition, the regular graphs introduced by
 Papadimitriou and Steiglitz and described in section~\ref{sec:ra} are used.
 Recall that these graphs contain $n=3k+4 \ (k \geq 1)$ nodes distributed on three levels.
@@ -615,14 +616,29 @@ A graph instance of the regular graph of size $n = 100 \  (k=32)$ is chosen.
 \end{algorithmic}
 \end{algorithm}
 
-For each of these graphs, a total of
+\paragraph{Termination:}
+As a termination criterion for the genetic algorithm,
+a bound for the total number of fitness function evaluations is set.
+For example The total number of function evaluations per single run
+is chosen to be $2 \cdot 10^4$ in table~\ref{tbl:t1}.
+That is, the algorithm terminates when $2 \cdot 10^4$ evaluations of the fitness function
+had occurred.
+This bound is indicated as an index $t$ in the notation $f_t(\vec{x})$.
+Consequently, only a small fraction of the search space is explored by the genetic algorithm.
+This fraction is about
+$ 2 \cdot 10^4 / 2^{100} \approx 1.6 \cdot 10^{-24} \% $
+for test set 1.
+And it is about $ 4 \cdot 10^4 / 2^{200} \approx 2.5 \cdot 10^{-54} \% $ for test set 2.
+
+\paragraph{Table~\ref{tbl:t1}:}
+For each graph in test set 1, a total of
 $N = 100$ independent runs of the genetic algorithm is performed.
 The results are summarized in table~\ref{tbl:t1} for the best
 fitness values that were encountered during the 100 runs.
 For each problem instance, the different fitness values that were
 obtained and their frequencies are recorded.
 Furthermore, the average fitness value $\bar{f}$ over
-all 100 runs is indicated at the bottom of the table.
+all 100 runs is indicated at the bottom of the table.\\
 For example, the first column in table~\ref{tbl:t1} indicates
 that the best obtained fitness value in 1 of the 100 runs was $f(\vec{x}) = 53$,
 the best obtained fitness value in 1 of the 100 runs was $f(\vec{x}) = 54$,
@@ -630,14 +646,6 @@ the best obtained fitness value in 3 of the 100 runs was $f(\vec{x}) = 55$, and 
 And the average of these values is indicated by $\bar{f}$, which is the average value of
 the best obtained fitness values over the 100 runs.
 
-As a termination criterion for the genetic algorithm, a bound for the total number of function evaluations is set.
-For example The total number of function evaluations per single run is chosen to be $2 \cdot 10^4$ in table~\ref{tbl:t1}.
-That is, the algorithm terminates when $2 \cdot 10^4$ evaluations of the fitness function
-had occurred.
-This bound is indicated as an index $t$ in the notation $f_t(\vec{x})$.
-Consequently, only a small fraction of the search space is explored by the genetic algorithm.
-This fraction is about $ 2 \cdot 10^4 / 2^{100} \approx 1.6 \cdot 10^{-24} \% $ for the first test set.
-and it is about $ 4 \cdot 10^4 / 2^{200} \approx 2.5 \cdot 10^{-54} \% $ for the second test set.
 
 \begin{table}[!htbp]
 \centering
@@ -646,9 +654,10 @@ and it is about $ 4 \cdot 10^4 / 2^{200} \approx 2.5 \cdot 10^{-54} \% $ for the
 \label{tbl:t1}
 \end{table}
 
-
-For each of the problems in the first test set, a total of $N=100$
-independent runs of the vercov algorithm is performed. The results are summarized in table~\ref{tbl:t2}.
+\paragraph{Table~\ref{tbl:t2}:}
+For each of the problems in the test set 1, a total of $N=100$
+independent runs of the vercov algorithm is performed.
+The results are summarized in table~\ref{tbl:t2}.
 Notice that for one problem instance, the results may differ in each run due to the
 non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:rand}).
 
@@ -659,22 +668,25 @@ non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:r
 \label{tbl:t2}
 \end{table}
 
+\paragraph{Test Set 2:}
 To test the behaviour of the genetic algorithm
 as well as the vercov algorithm for an even
-larger problem size, The same experiments were performed for larger graphs
+larger problem size, The same experiments
+were performed for larger graphs.
 The results in table~\ref{tbl:t3}
-and table~\ref{tbl:t4} correspond to the second test set, which consists of
-five random graphs of size $n = 200$ with different
-edge densities $d$, $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$, are used.
-Moreover we construct the graphs in a way that guarantees an optimum of quality 110
-(see algorithm~\ref{alg:gen}).
+and table~\ref{tbl:t4} correspond to test set 2,
+which consists of five random graphs of size
+$n = 200$ with different edge densities $d$.
+Densities $d \in \{0.1, 0.2, 0.3, 0.4, 0.5\}$ are used.
+Moreover, we construct the graphs in a way that guarantees an optimum of quality 110
+(see algorithm~\ref{alg:gen}, we set $k = 110$).
 In addition to a graph instance of the regular graphs introduced by
-Papadimitriou and Steiglitzof of size $n = 220 (k=66)$.
+Papadimitriou and Steiglitzof of size $n = 220 \ (k=66)$.
 In this case, the genetic algorithm
-was allowed to run for $4 \cdot 10^4$ function evaluations.
+was allowed to run for $4 \cdot 10^4$ function evaluations.\\
 The corresponding results obtained by the
 genetic algorithm are shown in table~\ref{tbl:t3}, while the results
-from the vercov algorithm are presented in table~\ref{tbl:t4}.
+from the vercov algorithm are shown in table~\ref{tbl:t4}.
 See the previous paragraphs for a better understanding of these results.
 
 \begin{table}[!htbp]
@@ -691,7 +703,8 @@ See the previous paragraphs for a better understanding of these results.
 \label{tbl:t4}
 \end{table}
 
-\subsection{results comments}
+% herereh
+\subsection{Experimental Conclusions}
 From these tables, a number of interesting conclusions
 can be drawn. For the random graphs used to compare the
 genetic algorithm and the vercov algorithm,
