@@ -44,7 +44,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}GA for the mvcp}{7}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experiments}{7}{section.4}
+\contentsline {section}{\numberline {4}Experiments}{8}{section.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Experimental Results}{8}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
@@ -58,7 +58,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Test Set 2:}{10}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Experimental Conclusions}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Experimental Conclusions}{11}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Conclusion}{14}{section.5}
 \defcounter {refsection}{0}\relax 

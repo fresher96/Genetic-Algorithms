@@ -11,7 +11,7 @@
 \usepackage{hyperref}
 \usepackage[all]{hypcap}
 \usepackage[autostyle]{csquotes}
-\usepackage[]{biblatex}
+\usepackage{biblatex}
 \usepackage{amsfonts}
 \usepackage{algorithm}
 \usepackage[end]{algpseudocode}
@@ -510,7 +510,6 @@ then the inequality $C \leq 2C^*$ must hold (notice that here the approximation
 doesn't depend on the number of vertices).
 
 \subsection{GA for the mvcp}
-\section{Experiments}
 \label{sec:GAmvcp}
 In order to apply genetic algorithm to solve the mvcp, a cover $V'$ is represented
 by a binary vector $\vec{x} = x_1x_2 \dots x_n$ where $x_i = 1$ if
@@ -567,14 +566,19 @@ of fitness function evaluations is set as the termination
 criterion, see section~\ref{sec:er} for details.
 
 
-\subsection{Experimental Results}
-\label{sec:er}
+\section{Experiments}
 For the experimental tests,
 the genetic algorithm software package GENEsYs is used tocite{[1] misp}.
 This implementation is based on the widely used GENESIS software by Grefenstette tocite{3, pp. 374-377 misp},
 but allows for more  flexibility concerning genetic operators and data monitoring.
 The parameter settings for the experiments are
 given in section~\ref{sec:GAmvcp}.
+
+
+\subsection{Experimental Results}
+\label{sec:er}
+The results given within the tables are explicitly provided
+from~\cite{mvcp-back} with no modification or any sort of validation.
 
 \paragraph{Test Set 1:}
 Multiple problem instances are used to demonstrate the applicability of GAs to tackle the mvcp.
