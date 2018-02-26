@@ -7,16 +7,16 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage{hyperref}
-\usepackage[all]{hypcap}
 \usepackage[autostyle]{csquotes}
 \usepackage{biblatex}
 \usepackage{amsfonts}
-\usepackage{algorithm}
 \usepackage[end]{algpseudocode}
 \usepackage{caption}
 \usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{algorithm}
+\usepackage[all]{hypcap}
 
 % preferences
 \graphicspath{ {images/} }
@@ -53,7 +53,7 @@
 
 % cover page
 \pagenumbering{roman}
-\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Cover Page}
+\phantomsection\addcontentsline{toc}{section}{Cover Page}
 
 {
 \begin{wrapfigure}{r}{0.25\textwidth}
@@ -97,7 +97,7 @@ Langauge Supervisor:	&	\textit{Mr. Fahmi Alammareen} \\
 \pagebreak
 
 % abstract page
-\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Abstract}
+\phantomsection\addcontentsline{toc}{section}{Abstract}
 
 \begin{abstract}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -125,12 +125,16 @@ to change.''
 
 
 % table of contents page
-\cleardoublepage\phantomsection\addcontentsline{toc}{section}{Contents}
+\setstretch{0.5}
+\phantomsection\addcontentsline{toc}{section}{Contents}
 \tableofcontents
+\setstretch{1.0}
+
+
 \pagebreak
 
 % List of Figures and Tables
-\cleardoublepage\phantomsection\addcontentsline{toc}{subsection}{List of Figures}
+\phantomsection\addcontentsline{toc}{subsection}{List of Figures}
 \listoffigures
 
 \phantomsection\addcontentsline{toc}{subsection}{List of Tables}
@@ -468,8 +472,9 @@ algorithm. Then we have $\frac{C(n)}{C^*(n)} = \Theta(\lg n)$ \cite[p.~323]{9:mv
 \centering
 \includegraphics[width=0.5\textwidth]{ps}
 \caption[The regular graph after Papadimitriou
-and Steiglitz]{Construction of the regular graph after Papadimitriou
-and Steiglitz with $k=3$.}
+and Steiglitz for $k=3$]
+{Construction of the regular graph after Papadimitriou
+and Steiglitz with $k=3$}
 \label{fig:ps}
 \end{figure}
 
@@ -777,13 +782,13 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\cite[hi][go]{coley} \cite{davis}
+\cite[hi][go]{coley} \cite{davis} \baselinestretch .
 
 
 \pagebreak
 
 
-\cleardoublepage\phantomsection\addcontentsline{toc}{section}{References}
+\phantomsection\addcontentsline{toc}{section}{References}
 %\bibliographystyle{abbrv}
 %\bibliography{references}
 \printbibliography

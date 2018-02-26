@@ -8,11 +8,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Contents}{iii}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{List of Figures}{v}{section*.5}
+\contentsline {subsection}{List of Figures}{iv}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{List of Tables}{v}{section*.7}
+\contentsline {subsection}{List of Tables}{iv}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Abbreviations}{v}{section*.9}
+\contentsline {subsection}{Abbreviations}{iv}{section*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \defcounter {refsection}{0}\relax 
@@ -40,25 +40,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Optimal solution:}{5}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Related Algorithms}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Related Algorithms}{6}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}GA for the mvcp}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}GA for the mvcp}{8}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experiments}{8}{section.4}
+\contentsline {section}{\numberline {4}Experiments}{9}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Experimental Results}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Experimental Results}{9}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test set~1:}{8}{section*.21}
+\contentsline {paragraph}{Test set~1:}{9}{section*.21}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Termination:}{9}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Table~\ref {tbl:t1}:}{9}{section*.23}
+\contentsline {paragraph}{Table~\ref {tbl:t1}:}{10}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Table~\ref {tbl:t2}:}{9}{section*.25}
+\contentsline {paragraph}{Table~\ref {tbl:t2}:}{10}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test set~2:}{10}{section*.27}
+\contentsline {paragraph}{Test set~2:}{11}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Experimental Conclusions}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Experimental Conclusions}{12}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Conclusion}{14}{section.5}
 \defcounter {refsection}{0}\relax 
