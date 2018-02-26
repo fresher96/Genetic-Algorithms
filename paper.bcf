@@ -91,7 +91,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -1930,10 +1930,29 @@
     <bcf:citekey order="4">goldberg</bcf:citekey>
     <bcf:citekey order="5">holland</bcf:citekey>
     <bcf:citekey order="6">holland</bcf:citekey>
-    <bcf:citekey order="7">mvcp-back</bcf:citekey>
-    <bcf:citekey order="8">mvcp-back</bcf:citekey>
-    <bcf:citekey order="9">mvcp-back</bcf:citekey>
-    <bcf:citekey order="10">mvcp-back</bcf:citekey>
+    <bcf:citekey order="7">2:misp</bcf:citekey>
+    <bcf:citekey order="7">12:misp</bcf:citekey>
+    <bcf:citekey order="8">wolfram:mvc</bcf:citekey>
+    <bcf:citekey order="9">14:mvcp</bcf:citekey>
+    <bcf:citekey order="10">6:misp</bcf:citekey>
+    <bcf:citekey order="11">10:mvcp</bcf:citekey>
+    <bcf:citekey order="12">cormen</bcf:citekey>
+    <bcf:citekey order="13">9:mvcp</bcf:citekey>
+    <bcf:citekey order="14">9:mvcp</bcf:citekey>
+    <bcf:citekey order="15">cormen</bcf:citekey>
+    <bcf:citekey order="16">mvcp-back</bcf:citekey>
+    <bcf:citekey order="17">7:mvcp</bcf:citekey>
+    <bcf:citekey order="17">11:mvcp</bcf:citekey>
+    <bcf:citekey order="18">mvcp-back</bcf:citekey>
+    <bcf:citekey order="19">2:mvcp</bcf:citekey>
+    <bcf:citekey order="19">12:mvcp</bcf:citekey>
+    <bcf:citekey order="20">mvcp-back</bcf:citekey>
+    <bcf:citekey order="21">1:misp</bcf:citekey>
+    <bcf:citekey order="22">5:mvcp</bcf:citekey>
+    <bcf:citekey order="23">mvcp-back</bcf:citekey>
+    <bcf:citekey order="24">10:mvcp</bcf:citekey>
+    <bcf:citekey order="25">coley</bcf:citekey>
+    <bcf:citekey order="26">davis</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

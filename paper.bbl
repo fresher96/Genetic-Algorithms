@@ -19,23 +19,70 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{1:misp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5dd8a5220c18ca8d45d8699f78e83dfa}{%
+           family={Back},
+           familyi={B\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \strng{fullhash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \strng{bibnamehash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \strng{authorbibnamehash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \strng{authornamehash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \strng{authorfullhash}{5dd8a5220c18ca8d45d8699f78e83dfa}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Systems Analysis Research Group, LSXI, University of Dortmund, Germany}
+      \field{title}{GENEsYs 1.0. Software distribution}
+      \field{year}{1992}
+    \endentry
+    \entry{2:misp}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ea44c67b3e5cc5883e53f6120d1f742b}{%
+           family={B{ä}ck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Elsevier Science Publishers}%
+      }
+      \strng{namehash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \strng{fullhash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \strng{bibnamehash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \strng{authorbibnamehash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \strng{authornamehash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \strng{authorfullhash}{ea44c67b3e5cc5883e53f6120d1f742b}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. 2nd Conference of Parallel Problem Solving from Nature, 1992}
+      \field{title}{The interaction of mutation rate, selection, and self-adaptation within a genetic algorithm}
+      \field{year}{1992}
+    \endentry
     \entry{coley}{book}{}
       \name{author}{1}{}{%
-        {{hash=229cb3480391bf3bddec2ce7f2262b7c}{%
+        {{hash=cc9922cbb076499a6965ce0bba0eecd5}{%
            family={Coley},
            familyi={C\bibinitperiod},
-           given={D.A.},
-           giveni={D\bibinitperiod}}}%
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {World Scientific}%
       }
-      \strng{namehash}{229cb3480391bf3bddec2ce7f2262b7c}
-      \strng{fullhash}{229cb3480391bf3bddec2ce7f2262b7c}
-      \strng{bibnamehash}{229cb3480391bf3bddec2ce7f2262b7c}
-      \strng{authorbibnamehash}{229cb3480391bf3bddec2ce7f2262b7c}
-      \strng{authornamehash}{229cb3480391bf3bddec2ce7f2262b7c}
-      \strng{authorfullhash}{229cb3480391bf3bddec2ce7f2262b7c}
+      \strng{namehash}{cc9922cbb076499a6965ce0bba0eecd5}
+      \strng{fullhash}{cc9922cbb076499a6965ce0bba0eecd5}
+      \strng{bibnamehash}{cc9922cbb076499a6965ce0bba0eecd5}
+      \strng{authorbibnamehash}{cc9922cbb076499a6965ce0bba0eecd5}
+      \strng{authornamehash}{cc9922cbb076499a6965ce0bba0eecd5}
+      \strng{authorfullhash}{cc9922cbb076499a6965ce0bba0eecd5}
       \field{sortinit}{C}
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
@@ -50,23 +97,176 @@
       \verb https://books.google.com/books?id=-D568prVv0QC
       \endverb
     \endentry
+    \entry{cormen}{book}{}
+      \name{author}{4}{}{%
+        {{hash=875d0e644e9b2df15d2a834abaecc2e8}{%
+           family={Cormen},
+           familyi={C\bibinitperiod},
+           given={Thomas\bibnamedelima H},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=cc52123efbc319dd8b741b29399a7d1e}{%
+           family={Leiserson},
+           familyi={L\bibinitperiod},
+           given={Charles\bibnamedelima E},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=934f07990d3d2deab2d3b8aa93e2611e}{%
+           family={Rivest},
+           familyi={R\bibinitperiod},
+           given={Ronald\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=bc78426660400760f77758aec45e71a8}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Clifford},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{9e52293b01f2b1924c0a4c85d0516c5a}
+      \strng{fullhash}{ad74957a3be4e1d347a9297bf6b9372c}
+      \strng{bibnamehash}{ad74957a3be4e1d347a9297bf6b9372c}
+      \strng{authorbibnamehash}{ad74957a3be4e1d347a9297bf6b9372c}
+      \strng{authornamehash}{9e52293b01f2b1924c0a4c85d0516c5a}
+      \strng{authorfullhash}{ad74957a3be4e1d347a9297bf6b9372c}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780262032933}
+      \field{series}{MIT electrical engineering and computer science series}
+      \field{title}{Introduction To Algorithms, 2nd Edition}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=NLngYyWFl\_YC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=NLngYyWFl%5C_YC
+      \endverb
+    \endentry
+    \entry{davis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7ba97d0451d256e105b6c0c7a99b8481}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Van Nostrand Reinhold}%
+      }
+      \strng{namehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{fullhash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{bibnamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authorbibnamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authornamehash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \strng{authorfullhash}{7ba97d0451d256e105b6c0c7a99b8481}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780442001735}
+      \field{series}{VNR computer library}
+      \field{title}{Handbook of genetic algorithms}
+      \field{year}{1991}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=Kl7vAAAAMAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=Kl7vAAAAMAAJ
+      \endverb
+    \endentry
+    \entry{2:mvcp}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=366212a928daf563d83a37ccb24284f9}{%
+           family={Eshelman},
+           familyi={E\bibinitperiod},
+           given={Larry\bibnamedelima J},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4e0b7868eea208f6608305c2b47d344e}{%
+           family={Caruana},
+           familyi={C\bibinitperiod},
+           given={Richard\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=34fc64c8ab4ac8335b376457d2d0be80}{%
+           family={Schaffer},
+           familyi={S\bibinitperiod},
+           given={J\bibnamedelima David},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
+      \strng{namehash}{d2d448e028b50b35bb9811abdede5f16}
+      \strng{fullhash}{d2d448e028b50b35bb9811abdede5f16}
+      \strng{bibnamehash}{d2d448e028b50b35bb9811abdede5f16}
+      \strng{authorbibnamehash}{d2d448e028b50b35bb9811abdede5f16}
+      \strng{authornamehash}{d2d448e028b50b35bb9811abdede5f16}
+      \strng{authorfullhash}{d2d448e028b50b35bb9811abdede5f16}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the third international conference on Genetic algorithms}
+      \field{title}{Biases in the crossover landscape}
+      \field{year}{1989}
+      \field{pages}{10\bibrangedash 19}
+      \range{pages}{10}
+    \endentry
+    \entry{6:misp}{book}{}
+      \name{author}{2}{}{%
+        {{hash=92f062c3e801b344723c260f2c4d227e}{%
+           family={Garey},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=9fc325bb47414d27ede010e33fac2349}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \strng{fullhash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \strng{bibnamehash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \strng{authorbibnamehash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \strng{authornamehash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \strng{authorfullhash}{3d113486f31acfe9eaca53d0ec8adbb9}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780716710448}
+      \field{series}{Books in mathematical series}
+      \field{title}{Computers and Intractability: A Guide to the Theory of NP-completeness}
+      \field{year}{1979}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=fjxGAQAAIAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=fjxGAQAAIAAJ
+      \endverb
+    \endentry
     \entry{goldberg}{book}{}
       \name{author}{1}{}{%
-        {{hash=428734fea68b25fcf00cb7954533d74e}{%
+        {{hash=eb281234920fe78f929f4e0831d65be5}{%
            family={Goldberg},
            familyi={G\bibinitperiod},
-           given={D.E.},
-           giveni={D\bibinitperiod}}}%
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Addison-Wesley Publishing Company}%
       }
-      \strng{namehash}{428734fea68b25fcf00cb7954533d74e}
-      \strng{fullhash}{428734fea68b25fcf00cb7954533d74e}
-      \strng{bibnamehash}{428734fea68b25fcf00cb7954533d74e}
-      \strng{authorbibnamehash}{428734fea68b25fcf00cb7954533d74e}
-      \strng{authornamehash}{428734fea68b25fcf00cb7954533d74e}
-      \strng{authorfullhash}{428734fea68b25fcf00cb7954533d74e}
+      \strng{namehash}{eb281234920fe78f929f4e0831d65be5}
+      \strng{fullhash}{eb281234920fe78f929f4e0831d65be5}
+      \strng{bibnamehash}{eb281234920fe78f929f4e0831d65be5}
+      \strng{authorbibnamehash}{eb281234920fe78f929f4e0831d65be5}
+      \strng{authornamehash}{eb281234920fe78f929f4e0831d65be5}
+      \strng{authorfullhash}{eb281234920fe78f929f4e0831d65be5}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
@@ -81,6 +281,30 @@
       \verb{url}
       \verb https://books.google.com/books?id=3%5C_RQAAAAMAAJ
       \endverb
+    \endentry
+    \entry{5:mvcp}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=1cee4c6a8684c43e2451a18aec52de2a}{%
+           family={Grefenstette},
+           familyi={G\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \strng{fullhash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \strng{bibnamehash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \strng{authorbibnamehash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \strng{authornamehash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \strng{authorfullhash}{1cee4c6a8684c43e2451a18aec52de2a}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of a Conference on Intelligent Systems and Machines}
+      \field{title}{GENESIS: A system for using genetic search procedures}
+      \field{year}{1984}
+      \field{pages}{161\bibrangedash 165}
+      \range{pages}{5}
     \endentry
     \entry{holland}{book}{}
       \name{author}{1}{}{%
@@ -108,36 +332,295 @@
     \endentry
     \entry{mvcp-back}{inproceedings}{}
       \name{author}{2}{}{%
-        {{hash=22144f589649263d754e2657420bbf83}{%
+        {{hash=672ab6a0e6f8f11ac4d8553df6ac8c87}{%
            family={Khuri},
            familyi={K\bibinitperiod},
-           given={S.},
+           given={Sami},
            giveni={S\bibinitperiod}}}%
-        {{hash=3912aaaf26efd7b835f044641afc1b14}{%
+        {{hash=ea44c67b3e5cc5883e53f6120d1f742b}{%
            family={B{ä}ck},
            familyi={B\bibinitperiod},
-           given={Th.},
+           given={Thomas},
            giveni={T\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {Saarbr{ü}cken, Germany}%
       }
-      \strng{namehash}{66ac89fa9259ebe36d429b3049504135}
-      \strng{fullhash}{66ac89fa9259ebe36d429b3049504135}
-      \strng{bibnamehash}{66ac89fa9259ebe36d429b3049504135}
-      \strng{authorbibnamehash}{66ac89fa9259ebe36d429b3049504135}
-      \strng{authornamehash}{66ac89fa9259ebe36d429b3049504135}
-      \strng{authorfullhash}{66ac89fa9259ebe36d429b3049504135}
+      \strng{namehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{fullhash}{2749a2012276e471c5cff6414e04e384}
+      \strng{bibnamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authorbibnamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authornamehash}{2749a2012276e471c5cff6414e04e384}
+      \strng{authorfullhash}{2749a2012276e471c5cff6414e04e384}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Genetic Algorithms within the Framework of Evolutionary Computation--Proc. of the KI-94 Workshop}
-      \field{note}{Available at: \url{https://www.researchgate.net/publication/2581134_An_Evolutionary_Heuristic_for_the_Minimum_Vertex_Cover_Problem/overview}}
+      \field{note}{Available at: \url{https://www.researchgate.net/publication/2581134_An_Evolutionary_Heuristic_for_the_Minimum_Vertex_Cover_Problem}}
       \field{title}{An evolutionary heuristic for the minimum vertex cover problem}
       \field{year}{1994}
       \field{pages}{86\bibrangedash 90}
       \range{pages}{5}
+    \endentry
+    \entry{7:mvcp}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=672ab6a0e6f8f11ac4d8553df6ac8c87}{%
+           family={Khuri},
+           familyi={K\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ea44c67b3e5cc5883e53f6120d1f742b}{%
+           family={B{ä}ck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=983045131ba803c1466116e2e58e28ff}{%
+           family={Heitk{ö}tter},
+           familyi={H\bibinitperiod},
+           given={J{ö}rg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{280e967a7cda57b93e65c3abcdcec99b}
+      \strng{fullhash}{280e967a7cda57b93e65c3abcdcec99b}
+      \strng{bibnamehash}{280e967a7cda57b93e65c3abcdcec99b}
+      \strng{authorbibnamehash}{280e967a7cda57b93e65c3abcdcec99b}
+      \strng{authornamehash}{280e967a7cda57b93e65c3abcdcec99b}
+      \strng{authorfullhash}{280e967a7cda57b93e65c3abcdcec99b}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM Conference on Computer Science}
+      \field{title}{An Evolutionary Approach to Combinatorial Optimization Problems.}
+      \field{year}{1994}
+      \field{pages}{66\bibrangedash 73}
+      \range{pages}{8}
+    \endentry
+    \entry{12:misp}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=21f11c53e9edce6a0e578a8505f6dd2d}{%
+           family={Muhlenbein},
+           familyi={M\bibinitperiod},
+           given={Heinz},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \strng{fullhash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \strng{bibnamehash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \strng{authorbibnamehash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \strng{authornamehash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \strng{authorfullhash}{21f11c53e9edce6a0e578a8505f6dd2d}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. 2nd Int. Conf. on Parallel Problem Solving from Nature, 1992}
+      \field{title}{How genetic algorithms really work: I. mutation and hillclimbing}
+      \field{year}{1992}
+    \endentry
+    \entry{9:mvcp}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e8e90b2073ea781d4957f8e607cf44f7}{%
+           family={Papadimitriou},
+           familyi={P\bibinitperiod},
+           given={Christos\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \strng{fullhash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \strng{bibnamehash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \strng{authorbibnamehash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \strng{authornamehash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \strng{authorfullhash}{e8e90b2073ea781d4957f8e607cf44f7}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780020153085}
+      \field{title}{Computational Complexity}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=6Z6\_QgAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=6Z6%5C_QgAACAAJ
+      \endverb
+    \endentry
+    \entry{10:mvcp}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e8e90b2073ea781d4957f8e607cf44f7}{%
+           family={Papadimitriou},
+           familyi={P\bibinitperiod},
+           given={Christos\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=0765a14719f507efefc8ebafc8974335}{%
+           family={Steiglitz},
+           familyi={S\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \strng{fullhash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \strng{bibnamehash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \strng{authorbibnamehash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \strng{authornamehash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \strng{authorfullhash}{842e4b65175ee21a03a1e5648af6e7a8}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486320137}
+      \field{series}{Dover Books on Computer Science}
+      \field{title}{Combinatorial Optimization: Algorithms and Complexity}
+      \field{year}{1982}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=BSPCAgAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=BSPCAgAAQBAJ
+      \endverb
+    \endentry
+    \entry{11:mvcp}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f6c16bf90a66e602ef60c27d1db1723c}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Jon\bibnamedelima T},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=18de7fc93f7dee3293cbe47ccbd91f58}{%
+           family={Palmer},
+           familyi={P\bibinitperiod},
+           given={Mark\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=af2d2b3add2310875584cdd02001d449}{%
+           family={Liepins},
+           familyi={L\bibinitperiod},
+           given={Gunar\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f0cb6c9c8e51a90462c8d4c8b5e1d33d}{%
+           family={Hilliard},
+           familyi={H\bibinitperiod},
+           given={Mike\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
+      \strng{namehash}{c235df7c02d70893a77803ba442a6eda}
+      \strng{fullhash}{705d271588413c55fab734839f27b192}
+      \strng{bibnamehash}{705d271588413c55fab734839f27b192}
+      \strng{authorbibnamehash}{705d271588413c55fab734839f27b192}
+      \strng{authornamehash}{c235df7c02d70893a77803ba442a6eda}
+      \strng{authorfullhash}{705d271588413c55fab734839f27b192}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 3rd international conference on genetic algorithms}
+      \field{title}{Some guidelines for genetic algorithms with penalty functions}
+      \field{year}{1989}
+      \field{pages}{191\bibrangedash 197}
+      \range{pages}{7}
+    \endentry
+    \entry{12:mvcp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4c7f5cff14924cf7e0027f753f94cc11}{%
+           family={Schaffer},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers}%
+      }
+      \strng{namehash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \strng{fullhash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \strng{bibnamehash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \strng{authorbibnamehash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \strng{authornamehash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \strng{authorfullhash}{4c7f5cff14924cf7e0027f753f94cc11}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{San Meteo, California}
+      \field{title}{A study of control parameters affecting online performance of genetic algorithms for function optimization}
+      \field{year}{1989}
+    \endentry
+    \entry{14:mvcp}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dfdb632e1c8f68928e3b28ac1a3b3d97}{%
+           family={Stinson},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima Robert},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Charles Babbage Research Centre}%
+      }
+      \strng{namehash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \strng{fullhash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \strng{bibnamehash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \strng{authorbibnamehash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \strng{authornamehash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \strng{authorfullhash}{dfdb632e1c8f68928e3b28ac1a3b3d97}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780919611153}
+      \field{title}{An Introduction to the Design and Analysis of Algorithms}
+      \field{year}{1985}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=VBfgAAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=VBfgAAAACAAJ
+      \endverb
+    \endentry
+    \entry{wolfram:mvc}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5d54d442adc2a0d430f0728fd6530577}{%
+           family={Weisstein},
+           familyi={W\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{fullhash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{bibnamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authorbibnamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authornamehash}{5d54d442adc2a0d430f0728fd6530577}
+      \strng{authorfullhash}{5d54d442adc2a0d430f0728fd6530577}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{From MathWorld--A Wolfram Web Resource}
+      \field{title}{``Minimum Vertex Cover''}
+      \field{urlday}{26}
+      \field{urlmonth}{2}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://mathworld.wolfram.com/MinimumVertexCover.html
+      \endverb
+      \verb{url}
+      \verb http://mathworld.wolfram.com/MinimumVertexCover.html
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
