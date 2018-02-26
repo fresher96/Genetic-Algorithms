@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.14)  25 FEB 2018 08:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.14)  26 FEB 2018 17:49
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -911,20 +911,20 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 (paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count319
@@ -994,7 +994,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 51.
+Package hyperref Info: Link coloring ON on input line 52.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1004,9 +1004,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count325
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
 (paper.out) (paper.out)
 \@outlinefile=\write5
@@ -1020,23 +1020,23 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'paper.bbl' found.
  (paper.bbl)
-Package biblatex Info: Reference section=0 on input line 51.
-Package biblatex Info: Reference segment=0 on input line 51.
+Package biblatex Info: Reference section=0 on input line 52.
+Package biblatex Info: Reference segment=0 on input line 52.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 <images/hiast.jpg, id=75, 308.65312pt x 294.34969pt>
 File: images/hiast.jpg Graphic file (type jpg)
 <use images/hiast.jpg>
-Package pdftex.def Info: images/hiast.jpg  used on input line 60. on input line
- 60.
+Package pdftex.def Info: images/hiast.jpg  used on input line 61. on input line
+ 61.
 Package pdftex.def Info: Requested size: 97.56383pt x 93.03952pt on input line 
-60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1063,98 +1063,92 @@ iast.jpg>]
 
  [5
 
-] [1]
-<images/ga.jpg, id=152, 659.46375pt x 376.40625pt>
+] [6] [1]
+<images/ga.jpg, id=174, 659.46375pt x 376.40625pt>
 File: images/ga.jpg Graphic file (type jpg)
 <use images/ga.jpg>
-Package pdftex.def Info: images/ga.jpg  used on input line 248. on input line 2
-48.
+Package pdftex.def Info: images/ga.jpg  used on input line 250. on input line 2
+50.
 Package pdftex.def Info: Requested size: 433.62pt x 247.50418pt on input line 2
-48.
+50.
  [2] [3 <./images/ga.jpg>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 309.
+put line 311.
  [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 408.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 410.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 408.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 410.
  [5]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 435.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 437.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 438.
-<images/ps.jpg, id=201, 564.60938pt x 380.17032pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 440.
+<images/ps.jpg, id=221, 564.60938pt x 380.17032pt>
 File: images/ps.jpg Graphic file (type jpg)
 <use images/ps.jpg>
-Package pdftex.def Info: images/ps.jpg  used on input line 468. on input line 4
-68.
+Package pdftex.def Info: images/ps.jpg  used on input line 470. on input line 4
+70.
 Package pdftex.def Info: Requested size: 216.81pt x 145.98605pt on input line 4
-68.
- [6 <./images/ps.jpg>] [7]
+70.
+
+[6 <./images/ps.jpg>] [7]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 545.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 547.
  [8]
-<images/t1.jpg, id=241, 848.4197pt x 425.33907pt>
+<images/t1.jpg, id=262, 848.4197pt x 425.33907pt>
 File: images/t1.jpg Graphic file (type jpg)
 <use images/t1.jpg>
-Package pdftex.def Info: images/t1.jpg  used on input line 652. on input line 6
-52.
+Package pdftex.def Info: images/t1.jpg  used on input line 654. on input line 6
+54.
 Package pdftex.def Info: Requested size: 433.62pt x 217.38733pt on input line 6
-52.
+54.
  [9]
-<images/t2.jpg, id=253, 748.29562pt x 396.7322pt>
+<images/t2.jpg, id=273, 748.29562pt x 396.7322pt>
 File: images/t2.jpg Graphic file (type jpg)
 <use images/t2.jpg>
-Package pdftex.def Info: images/t2.jpg  used on input line 666. on input line 6
-66.
-Package pdftex.def Info: Requested size: 433.62pt x 229.899pt on input line 666
+Package pdftex.def Info: images/t2.jpg  used on input line 670. on input line 6
+70.
+Package pdftex.def Info: Requested size: 433.62pt x 229.899pt on input line 670
 .
-<images/t3.jpg, id=259, 858.95906pt x 426.09187pt>
+<images/t3.jpg, id=279, 858.95906pt x 426.09187pt>
 File: images/t3.jpg Graphic file (type jpg)
 <use images/t3.jpg>
-Package pdftex.def Info: images/t3.jpg  used on input line 694. on input line 6
-94.
-Package pdftex.def Info: Requested size: 433.62pt x 215.09991pt on input line 6
-94.
-<images/t4.jpg, id=260, 738.50906pt x 421.575pt>
+Package pdftex.def Info: images/t3.jpg  used on input line 700. on input line 7
+00.
+Package pdftex.def Info: Requested size: 433.62pt x 215.09991pt on input line 7
+00.
+<images/t4.jpg, id=280, 738.50906pt x 421.575pt>
 File: images/t4.jpg Graphic file (type jpg)
 <use images/t4.jpg>
-Package pdftex.def Info: images/t4.jpg  used on input line 701. on input line 7
-01.
+Package pdftex.def Info: images/t4.jpg  used on input line 709. on input line 7
+09.
 Package pdftex.def Info: Requested size: 433.62pt x 247.5306pt on input line 70
-1.
+9.
  [10 <./images/t1.jpg>] [11 <./images/t2.jpg> <./images/t3.jpg>] [12 <./images/
-t4.jpg>] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 770.
- [14
+t4.jpg>] [13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 791.
+ [15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 770.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 791.
  (paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 770.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 770.
-
-
-Package rerunfilecheck Warning: File `paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `paper.out':
-(rerunfilecheck)             Before: 00AF13E844363A1E82278D25941C8501;1050
-(rerunfilecheck)             After:  E9308BA7BA06B7D302498B62CAF48595;1058.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 791.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 791.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: E9308BA7BA06B7D302498B62CAF48595;1058.
 Package logreq Info: Writing requests to 'paper.run.xml'.
 \openout1 = `paper.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 770.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 791.
  ) 
 Here is how much of TeX's memory you used:
- 15989 strings out of 493312
- 260203 string characters out of 3138896
- 719844 words of memory out of 3000000
+ 15991 strings out of 493312
+ 260217 string characters out of 3138896
+ 721958 words of memory out of 3000000
  19249 multiletter control sequences out of 15000+200000
  14531 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1183,9 +1177,9 @@ msfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on paper.pdf (19 pages, 838053 bytes).
+Output written on paper.pdf (21 pages, 845927 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
  180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

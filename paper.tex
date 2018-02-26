@@ -36,6 +36,7 @@
 \algnewcommand\algorithmicto{\textbf{to}}
 \algrenewtext{For}[3]%
 {\algorithmicfor\ #1 = #2 \algorithmicto\ #3 \algorithmicdo}
+\captionsetup{font=footnotesize}
 
 
 % title
@@ -72,7 +73,8 @@ Fourth Year
 
 \vspace{-10mm}
 \begin{center}
-Keywords: genetic algorithms, NP-complete, combinatorial optimization, non-deterministic algorithms, approximation algorithms, minimum vertex cover.
+Keywords: minimum vertex cover, NP-complete, genetic algorithms,\\
+combinatorial optimization, approximation algorithms.
 \end{center}
 
 \vspace{5mm}
@@ -433,7 +435,7 @@ This is not a good strategy as was demonstrated
 by Papadimitriou and Steiglitz tocite{10 p. 407 mvcp}.
 
 They considered regular graphs\footnote{%
-by regular graphs we don't refer to the definition where
+by ``regular graphs'' we don't refer to the definition where
 each vertex has the same degree.
 }, each of which consists of three levels.
 The first two levels have the same
@@ -650,7 +652,9 @@ the best obtained fitness values over the 100 runs.
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t1}
-\caption{general schema for genetic algorithms}
+\caption{%
+Experimental results obtained by the genetic algorithm for five random graphs of size $n = 100$ with edge density: $d = 0.1$ (``mvcp100-01''), $d = 0.2$ (``mvcp100-02''), $d = 0.3$ (``mvcp100-03''), $d = 0.5$ (``mvcp100-04''), $d = 0.5$ (``mvcp100-05'') and the regular graph of size $n = 100 \ (k=32)$ from Papadimitriou and Steiglitz (``PS100'').%
+}
 \label{tbl:t1}
 \end{table}
 
@@ -664,7 +668,9 @@ non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:r
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t2}
-\caption{general schema for genetic algorithms}
+\caption{%
+Experimental results obtained by the vercov algorithm for five random graphs of size $n = 100$ with edge density: $d = 0.1$ (``mvcp100-01''), $d = 0.2$ (``mvcp100-02''), $d = 0.3$ (``mvcp100-03''), $d = 0.5$ (``mvcp100-04''), $d = 0.5$ (``mvcp100-05'') and the regular graph of size $n = 100 \ (k=32)$ from Papadimitriou and Steiglitz (``PS100'').%
+}
 \label{tbl:t2}
 \end{table}
 
@@ -692,55 +698,71 @@ See the previous paragraphs for a better understanding of these results.
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t3}
-\caption{general schema for genetic algorithms}
+\caption{%
+Experimental results obtained by the genetic algorithm for five random graphs of size $n = 200$ with edge density: $d = 0.1$ (``mvcp200-01''), $d = 0.2$ (``mvcp200-02''), $d = 0.3$ (``mvcp200-03''), $d = 0.5$ (``mvcp200-04''), $d = 0.5$ (``mvcp200-05'') and the regular graph of size $n = 202 \ (k=66)$ from Papadimitriou and Steiglitz (``PS202'').%
+}
 \label{tbl:t3}
 \end{table}
 
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t4}
-\caption{general schema for genetic algorithms}
+\caption{%
+Experimental results obtained by the vercov algorithm for five random graphs of size $n = 200$ with edge density: $d = 0.1$ (``mvcp200-01''), $d = 0.2$ (``mvcp200-02''), $d = 0.3$ (``mvcp200-03''), $d = 0.5$ (``mvcp200-04''), $d = 0.5$ (``mvcp200-05'') and the regular graph of size $n = 202 \ (k=66)$ from Papadimitriou and Steiglitz (``PS202'').%
+}
 \label{tbl:t4}
 \end{table}
 
-% herereh
+
 \subsection{Experimental Conclusions}
 From these tables, a number of interesting conclusions
-can be drawn. For the random graphs used to compare the
+can be drawn.
+For the random graphs used to compare the
 genetic algorithm and the vercov algorithm,
-it is known by construction that an optimum of quality 55 exists in the first test set,
-(respectively, an optimum of quality 110 exists for the second test set). This optimum is likely to be the
-global optimum, And it is found by the genetic
-algorithm at least once within the $N = 100$ runs that were performed.
+it is known by construction that an optimum of
+quality 55 exists for test set 1,
+(respectively, an optimum of quality 110 exists
+for the test set 2).
+This optimum is likely to be the global optimum.
+And it is found by the genetic algorithm at least once
+within the $N = 100$ runs that were performed.
 
 Moreover, the randomly constructed problems quickly
 become simpler for the genetic algorithm when the edge
-density is increased. For an edge density of $d \in \{0.4, 0.5\}$, the
+density is increased.
+For an edge density of $d \in \{0.4, 0.5\}$, the
 genetic algorithm almost surely finds the global optimum
-of the problems, while vercov algorithm gives a relatively terrible results.
+of the problems, while vercov algorithm gives
+a relatively terrible results.
 
 In case of the regular graph after Papadimitriou and
 Steiglitz, the genetic algorithm is able to find the global
 optimum in about $2/3$ of all runs, while the remaining
 runs identify a solution of quality $2k + 2$.
-Whereas, vercov algorithm gives a solution of quality $2k + 2$ in all of the 100 runs as expected.
+Whereas, vercov algorithm gives a solution of
+quality $2k + 2$ in all of the 100 runs as expected tocite{[10] mvcp}.
 Recall that the graphs are constructed
 so as to force the vercov algorithm into yielding solutions
 of quality $2k + 2$.
-The random choice of edges in line~\ref{alg:rand} of the algorithm implies that nodes from either layers one and two, or layers two and three are involved in the solution being constructed, which in turn implies that two layers have to be part of the solution found by the algorithm [10]mvcp.
+The random choice of edges (line~\ref{alg:rand} of algorithm~\ref{alg:vercov})
+implies that nodes from either layers one and two, or layers two and three
+are involved in the solution being constructed,
+which in turn implies that two layers have to be part of the solution
+found by the algorithm.
 
-For the randomly constructed graphs, the vercov algorithm performs
-poorly.
-It barely finds solutions of quality 80 (for graphs of size 100) and 172 (for graphs of size 200).
+For the randomly constructed graphs, the vercov algorithm
+performs poorly.
+It barely finds solutions of quality 80 (for graphs of size 100)
+and 172 (for graphs of size 200).
 The average performance of the vercov algorithm (surprisingly)
-decreases as the edge density is increased.
+decreases as the edge density is increased;
 i.e. the problems become even harder for the vercov algorithm
 while they become much simpler for the genetic algorithm when
 the edge density increases.
 The average fitness found by the genetic algorithm is notably
 better than the one found by the vercov algorithm.
 One can demonstrate this by calculating
-the ratio of the absolute (or equivalently the relative) error.
+the ratio of the absolute (or equivalently, the relative) error.
 For example, for the first problem instance,
 let $\bar{f}_1, \bar{f}_2$ be the average found by
 the genetic algorithm, vercov algorithm respectively.
@@ -749,14 +771,12 @@ that is, the error was reduced by a factor of 4.
 
 
 \section{Conclusion}
-In this work, we have demonstrated that genetic algorithms can be used in a straightforward way t
-good approximate solutions of the minimum vertex cover
-problem. Moreover, the results found by the genetic algorithm are better than those obtained from the best
-known traditional heuristic, the vercov algorithm. These, in addition to other good results obtained on, highly constrained combinatorial optimization
-problems such as the subset sum [7], minimum tardy
-task [7], and multiple knapsack problems [8], give strong
-evidence that genetic algorithms can yield good solutions for a wide range of hard combinatorial optimization problems for which solutions can be represented by
-binary strings. \cite[p.~400, p.]{mvcp-back, goldberg} \cite{coley}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 \pagebreak
