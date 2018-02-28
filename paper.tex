@@ -100,12 +100,13 @@ Langauge Supervisor:	&	\textit{Mr. Fahmi Alammareen} \\
 \phantomsection\addcontentsline{toc}{section}{Abstract}
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Remarkable results obtained from the application of a
+genetic algorithm to the minimum vertex cover problem
+are reported, and tested against the results of the
+best known heuristic algorithm for graphs of sizes 100 and 200 nodes.
+In contrast to many other approximation algorithms that use problem-specific
+knowledge, the approach presented relies on a graded penalty term component
+of the fitness function to penalize infeasible solutions.
 \end{abstract}
 
 \vfill
@@ -164,24 +165,46 @@ mvcp	&	\textbf{M}inimum \textbf{V}ertex \textbf{C}over \textbf{P}roblem \\
 \pagenumbering{arabic}
 
 \section{Introduction}
+\label{sec:intro}
 Once the NP-hardness of a combinatorial optimization
 problem is established, the search for an optimal solution
-is abandoned. The goal then becomes one of finding a
-good heuristic, i.e. a polynomial running time algorithm
-that can find solutions close to the optimal. In most cases,
-traditional heuristics are problem dependent; a heuristic is
-tailored to the specific problem it is trying to solve.
+is abandoned.
+Our goal then becomes one of finding good heuristics
+for that problem.
+That is, we try to find approximation algorithms
+that have polynomial time complexities and return near-optimal
+solutions.
+In most cases, the heuristic is problem dependent; it is tailored to specific problem
+it is trying to solve, and it is tightly coupled with observations made about the problem.
+The \textit{minimum vertex cover} problem is a typical example of such
+problems \cite{wolfram:mvc}.
+Due to its numerous applications especially in various
+matching problems, the problem is not abandoned and it has many
+approximation algorithms.
 
-In this paper, we present an alternative approach that
-uses genetic algorithms as a generalized heuristic for solving NP-hard combinatorial optimization problems. The
-application of a genetic algorithm is demonstrated here for
-the \textit{minimum vertex cover} problem. These algorithms
-have been successfully applied to a broad range of problems. This wide range can be tackled by genetic algorithms
-mainly due to the fact that they work with an encoding of
-the domain rather than with the problem domain itself.
+In this work, we present an alternative approach that
+uses \textit{genetic algorithms} as a generalized heuristic for
+solving NP-hard combinatorial optimization problems.
+These algorithms have been successfully applied to a broad
+range of problems.
+This wide range can be tackled by genetic algorithms
+mainly due to the fact that these algorithms work with an
+encoding of the problem rather than the characteristics
+of that problem.
+Remarkable results were obtained and compared to the results of the
+best known heuristic algorithm for the mvcp.
+
+The outline of this paper is as follows: Firstly, Section~\ref{sec:ga} gives a
+short introduction to genetic algorithms, and explains briefly how they work.
+Section~\ref{sec:mvcp} introduces the mvcp with two of its main heuristics,
+and explains its representation for an application of the genetic algorithm.
+Lastly, Section~\ref{sec:exper} presents our experimental results and
+points out the notable observations that can be drawn from these results.
+
 
 
 \section{Genetic Algorithms}
+\label{sec:ga}
 \subsection{The Intuition Behind GAs}
 Genetic Algorithms (GAs) \cite{coley, goldberg} are population based
 search algorithms, where by repeated use of genetic operations,
@@ -219,11 +242,6 @@ i.e. how \textem{fit} an individual is?
 a method for mixing fragments of the better solutions to form new, on
 average even better solutions.
 Which permits the population to \textem{evolve} naturally.
-
-\item
-a \textem{mutation} operator to avoid permanent loss of diversity within the
-solutions.
-This allows introducing new information in the population.
 
 \end{enumerate}
 
@@ -311,7 +329,7 @@ in genetic algorithms \cite{holland}, recent theoretical
 work gives strong evidence for an appropriate choice of a
 mutation rate $ p_m = 1/n $ on many problems \cite{2:misp, 12:misp}.
 
-\begin{algorithm}
+\begin{algorithm}[!htbp]
 \caption{GenticAlgorithm$\left( n, u, p_c, p_m, f \right)$}
 \label{alg:ga}
 
@@ -356,6 +374,7 @@ mutation rate $ p_m = 1/n $ on many problems \cite{2:misp, 12:misp}.
 
 
 \section{The Minimum Vertex Cover Problem}
+\label{sec:mvcp}
 The problem of finding a minimum vertex cover is a classical
 optimization problem in computer science and is a typical
 example of an NP-complete optimization problem \cite{wolfram:mvc}
@@ -405,6 +424,7 @@ such that $\forall i, j \in V', \langle i, j \rangle \in E$)
 The close relationship between these problems is characterized
 by the following lemma \cite{6:misp}.
 \begin{lemma}
+\label{lem}
 \ \\[3mm]
 For any graph $G = (V, E)$ and $V' \subseteq V$, the following
 statements are equivalent:
@@ -482,7 +502,7 @@ Fortunately, a simpler and better algorithm exists.
 The following simple algorithm is surprisingly the
 best approximation algorithm known for the mvcp \cite[p.~301]{9:mvcp}.
 
-\begin{algorithm}
+\begin{algorithm}[!htbp]
 \caption{vercov($G = (V, E)$)}
 \label{alg:vercov}
 \begin{algorithmic}[1]
@@ -570,6 +590,7 @@ criterion \cite{mvcp-back}, see section~\ref{sec:er} for details.
 
 
 \section{Experiments}
+\label{sec:exper}
 For the experimental tests,
 the genetic algorithm software package GENEsYs is used \cite{1:misp}.
 This implementation is based on the widely used GENESIS software by Grefenstette \cite{5:mvcp},
@@ -598,7 +619,7 @@ Recall that these graphs contain $n=3k+4 \ (k \geq 1)$ nodes distributed on thre
 They can be scaled up by choosing high values for $k$.
 A graph instance of the regular graph of size $n = 100 \  (k=32)$ is chosen.
 
-\begin{algorithm}
+\begin{algorithm}[!htbp]
 \caption{GenerateRandomGraph$(n, d, k)$}
 \label{alg:gen}
 \begin{algorithmic}[1]
@@ -665,7 +686,7 @@ Experimental results obtained by the genetic algorithm for five random graphs of
 
 \paragraph{Table~\ref{tbl:t2}:}
 For each of the problems in the test set~1, a total of $N=100$
-independent runs of the vercov algorithm is performed.
+independent runs of the vercov heuristic is performed.
 The results are summarized in table~\ref{tbl:t2}.
 Notice that for one problem instance, the results may differ in each run due to the
 non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:rand}).
@@ -673,15 +694,15 @@ non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:r
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t2}
-\caption[Results obtained by vercov algorithm for graphs in test set~1]{%
-Experimental results obtained by the vercov algorithm for five random graphs of size $n = 100$ with edge density: $d = 0.1$ (``mvcp100-01''), $d = 0.2$ (``mvcp100-02''), $d = 0.3$ (``mvcp100-03''), $d = 0.5$ (``mvcp100-04''), $d = 0.5$ (``mvcp100-05'') and the regular graph of size $n = 100 \ (k=32)$ from Papadimitriou and Steiglitz (``PS100'').%
+\caption[Results obtained by vercov heuristic for graphs in test set~1]{%
+Experimental results obtained by the vercov heuristic for five random graphs of size $n = 100$ with edge density: $d = 0.1$ (``mvcp100-01''), $d = 0.2$ (``mvcp100-02''), $d = 0.3$ (``mvcp100-03''), $d = 0.5$ (``mvcp100-04''), $d = 0.5$ (``mvcp100-05'') and the regular graph of size $n = 100 \ (k=32)$ from Papadimitriou and Steiglitz (``PS100'').%
 }
 \label{tbl:t2}
 \end{table}
 
 \paragraph{Test set~2:}
 To test the behaviour of the genetic algorithm
-as well as the vercov algorithm for an even
+as well as the vercov heuristic for an even
 larger problem size, The same experiments
 were performed for larger graphs.
 The results in table~\ref{tbl:t3}
@@ -697,7 +718,7 @@ In this case, the genetic algorithm
 was allowed to run for $4 \cdot 10^4$ function evaluations.\\
 The corresponding results obtained by the
 genetic algorithm are shown in table~\ref{tbl:t3}, while the results
-from the vercov algorithm are shown in table~\ref{tbl:t4}.
+from the vercov heuristic are shown in table~\ref{tbl:t4}.
 See the previous paragraphs for a better understanding of these results.
 
 \begin{table}[!htbp]
@@ -712,8 +733,8 @@ Experimental results obtained by the genetic algorithm for five random graphs of
 \begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t4}
-\caption[Results obtained by vercov algorithm for graphs in test set~2]{%
-Experimental results obtained by the vercov algorithm for five random graphs of size $n = 200$ with edge density: $d = 0.1$ (``mvcp200-01''), $d = 0.2$ (``mvcp200-02''), $d = 0.3$ (``mvcp200-03''), $d = 0.5$ (``mvcp200-04''), $d = 0.5$ (``mvcp200-05'') and the regular graph of size $n = 202 \ (k=66)$ from Papadimitriou and Steiglitz (``PS202'').%
+\caption[Results obtained by vercov heuristic for graphs in test set~2]{%
+Experimental results obtained by the vercov heuristic for five random graphs of size $n = 200$ with edge density: $d = 0.1$ (``mvcp200-01''), $d = 0.2$ (``mvcp200-02''), $d = 0.3$ (``mvcp200-03''), $d = 0.5$ (``mvcp200-04''), $d = 0.5$ (``mvcp200-05'') and the regular graph of size $n = 202 \ (k=66)$ from Papadimitriou and Steiglitz (``PS202'').%
 }
 \label{tbl:t4}
 \end{table}
@@ -723,7 +744,7 @@ Experimental results obtained by the vercov algorithm for five random graphs of 
 From these tables, a number of interesting conclusions
 can be drawn.
 For the random graphs used to compare the
-genetic algorithm and the vercov algorithm,
+genetic algorithm and the vercov heuristic,
 it is known by construction that an optimum of
 quality 55 exists for test set~1,
 (respectively, an optimum of quality 110 exists
@@ -737,17 +758,17 @@ become simpler for the genetic algorithm when the edge
 density is increased.
 For an edge density of $d \in \{0.4, 0.5\}$, the
 genetic algorithm almost surely finds the global optimum
-of the problems, while vercov algorithm gives
+of the problems, while vercov heuristic gives
 a relatively terrible results.
 
 In case of the regular graph after Papadimitriou and
 Steiglitz, the genetic algorithm is able to find the global
 optimum in about $2/3$ of all runs, while the remaining
 runs identify a solution of quality $2k + 2$.
-Whereas, vercov algorithm gives a solution of
+Whereas, vercov heuristic gives a solution of
 quality $2k + 2$ in all of the 100 runs as expected \cite{10:mvcp}.
 Recall that the graphs are constructed
-so as to force the vercov algorithm into yielding solutions
+so as to force the vercov heuristic into yielding solutions
 of quality $2k + 2$.
 The random choice of edges (line~\ref{alg:rand} of algorithm~\ref{alg:vercov})
 implies that nodes from either layers one and two, or layers two and three
@@ -755,35 +776,46 @@ are involved in the solution being constructed,
 which in turn implies that two layers have to be part of the solution
 found by the algorithm.
 
-For the randomly constructed graphs, the vercov algorithm
+For the randomly constructed graphs, the vercov heuristic
 performs poorly.
 It barely finds solutions of quality 80 (for graphs of size 100)
 and 172 (for graphs of size 200).
-The average performance of the vercov algorithm (surprisingly)
+Moreover, notice that the quality of its solutions are dominated
+by the quality of the solutions found by the genetic algorithm;
+the worst solutions found by the genetic algorithm are almost as
+good as the best solutions found by the vercov heuristic.
+
+The average performance of the vercov heuristic (surprisingly)
 decreases as the edge density is increased;
-i.e. the problems become even harder for the vercov algorithm
+i.e. the problems become even harder for the vercov heuristic
 while they become much simpler for the genetic algorithm when
 the edge density increases.
 The average fitness found by the genetic algorithm is notably
-better than the one found by the vercov algorithm.
+better than the one found by the vercov heuristic.
 One can demonstrate this by calculating
 the ratio of the absolute (or equivalently, the relative) error.
 For example, for the first problem instance,
 let $\bar{f}_1, \bar{f}_2$ be the average found by
-the genetic algorithm, vercov algorithm respectively.
+the genetic algorithm, vercov heuristic respectively.
 We have $ (\bar{f}_2 - 55) / (\bar{f}_1 - 55) = (86.46 - 55)/(62.61 - 55) \approx 4 = 400\%$
 that is, the error was reduced by a factor of 4.
 
 
 \section{Conclusion}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\cite[hi][go]{coley} \cite{davis} \baselinestretch .
-
+\label{sec:conc}
+This work has demonstrated that genetic algorithms can
+be used in a fairly straightforward way to find good
+approximative solutions for NP-hard problems, namely
+the minimum vertex cover problem.
+The robustness of the presented solution along with
+the positive results obtained support the idea
+that genetic algorithms are a desirable approach for tackling
+these type of problems.
+To tackle a new problem, rather than having to construct
+tailored heuristics to handle the problem under consideration,
+we advocate the use of genetic algorithms where the
+only change to perform is the formulation of a new fitness
+function.
 
 \pagebreak
 

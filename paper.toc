@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Initialization}{2}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Selection}{2}{section*.13}
+\contentsline {paragraph}{Selection}{3}{section*.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Crossover}{3}{section*.14}
 \defcounter {refsection}{0}\relax 
@@ -32,7 +32,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}The Minimum Vertex Cover Problem}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Problem instance:}{4}{section*.16}
+\contentsline {paragraph}{Problem instance:}{5}{section*.16}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Feasible solution:}{5}{section*.17}
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Table~\ref {tbl:t2}:}{10}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Test set~2:}{11}{section*.27}
+\contentsline {paragraph}{Test set~2:}{10}{section*.27}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Experimental Conclusions}{12}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
