@@ -13,10 +13,12 @@
 \usepackage[end]{algpseudocode}
 \usepackage{caption}
 \usepackage{setspace}
+\usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage[a4paper, total={6in, 8.5in}]{geometry}
 \usepackage{algorithm}
 \usepackage[all]{hypcap}
+
 
 % preferences
 \graphicspath{ {images/} }
@@ -126,10 +128,8 @@ to change.''
 
 
 % table of contents page
-\setstretch{0.5}
 \phantomsection\addcontentsline{toc}{section}{Contents}
 \tableofcontents
-\setstretch{1.0}
 
 
 \pagebreak
@@ -499,7 +499,7 @@ and Steiglitz with $k=3$}
 \end{figure}
 
 Fortunately, a simpler and better algorithm exists.
-The following simple algorithm is surprisingly the
+The following simple algorithm~\ref{alg:vercov} is surprisingly the
 best approximation algorithm known for the mvcp \cite[p.~301]{9:mvcp}.
 
 \begin{algorithm}[!htb]
@@ -675,7 +675,7 @@ And the average of these values is indicated by $\bar{f}$, which is the average 
 the best obtained fitness values over the 100 runs.
 
 
-\begin{table}[!htb]
+\begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t1}
 \caption[Results obtained by GA for graphs in test set~1]{%
@@ -691,7 +691,7 @@ The results are summarized in table~\ref{tbl:t2}.
 Notice that for one problem instance, the results may differ in each run due to the
 non-determinism of the algorithm (see algorithm~\ref{alg:vercov} line~\ref{alg:rand}).
 
-\begin{table}[!htb]
+\begin{table}[!htbp]
 \centering
 \includegraphics[width=1\textwidth]{t2}
 \caption[Results obtained by vercov heuristic for graphs in test set~1]{%
@@ -799,6 +799,29 @@ let $\bar{f}_1, \bar{f}_2$ be the average found by
 the genetic algorithm, vercov heuristic respectively.
 We have $ (\bar{f}_2 - 55) / (\bar{f}_1 - 55) = (86.46 - 55)/(62.61 - 55) \approx 4 = 400\%$
 that is, the error was reduced by a factor of 4.
+This is further visualized in figure~\ref{fig:av} for the random graphs in
+test set~1 (figure on the left) and for the random graphs in test set~2 (figure on the right),
+where the average value found by each algorithm
+for each graph instance is plotted.
+
+\begin{figure}[!h]
+
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth]{av1} 
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth]{av2}
+\end{subfigure}
+
+\caption[average fitness value plotted against edge density]
+{%
+average fitness value found by GA and vercov heuristic plotted
+against the edge density for each random graph in test set~1 (the left figure) or~2
+(the right figure).%
+}
+\label{fig:av}
+\end{figure}
+
 
 
 \section{Conclusion}
