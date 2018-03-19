@@ -40,7 +40,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Optimal solution:}{5}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Related Algorithms}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Minimum Vertex Cover Approximation Algorithms}{5}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}GA for the mvcp}{7}{subsection.3.2}
 \defcounter {refsection}{0}\relax 

@@ -1937,21 +1937,22 @@
     <bcf:citekey order="10">14:mvcp</bcf:citekey>
     <bcf:citekey order="11">6:misp</bcf:citekey>
     <bcf:citekey order="12">10:mvcp</bcf:citekey>
-    <bcf:citekey order="13">cormen</bcf:citekey>
-    <bcf:citekey order="14">9:mvcp</bcf:citekey>
+    <bcf:citekey order="13">mvcp-back</bcf:citekey>
+    <bcf:citekey order="14">cormen</bcf:citekey>
     <bcf:citekey order="15">9:mvcp</bcf:citekey>
-    <bcf:citekey order="16">cormen</bcf:citekey>
-    <bcf:citekey order="17">mvcp-back</bcf:citekey>
-    <bcf:citekey order="18">7:mvcp</bcf:citekey>
-    <bcf:citekey order="18">11:mvcp</bcf:citekey>
-    <bcf:citekey order="19">mvcp-back</bcf:citekey>
-    <bcf:citekey order="20">2:mvcp</bcf:citekey>
-    <bcf:citekey order="20">12:mvcp</bcf:citekey>
-    <bcf:citekey order="21">mvcp-back</bcf:citekey>
-    <bcf:citekey order="22">1:misp</bcf:citekey>
-    <bcf:citekey order="23">5:mvcp</bcf:citekey>
-    <bcf:citekey order="24">mvcp-back</bcf:citekey>
-    <bcf:citekey order="25">10:mvcp</bcf:citekey>
+    <bcf:citekey order="16">9:mvcp</bcf:citekey>
+    <bcf:citekey order="17">cormen</bcf:citekey>
+    <bcf:citekey order="18">mvcp-back</bcf:citekey>
+    <bcf:citekey order="19">7:mvcp</bcf:citekey>
+    <bcf:citekey order="19">11:mvcp</bcf:citekey>
+    <bcf:citekey order="20">mvcp-back</bcf:citekey>
+    <bcf:citekey order="21">2:mvcp</bcf:citekey>
+    <bcf:citekey order="21">12:mvcp</bcf:citekey>
+    <bcf:citekey order="22">mvcp-back</bcf:citekey>
+    <bcf:citekey order="23">1:misp</bcf:citekey>
+    <bcf:citekey order="24">5:mvcp</bcf:citekey>
+    <bcf:citekey order="25">mvcp-back</bcf:citekey>
+    <bcf:citekey order="26">10:mvcp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

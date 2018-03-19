@@ -176,14 +176,14 @@ that have polynomial time complexities and return near-optimal
 solutions.
 In most cases, the heuristic is problem dependent; it is tailored to specific problem
 it is trying to solve, and it is tightly coupled with observations made about the problem.
-The \textit{minimum vertex cover} problem is a typical example of such
+The \textit{minimum vertex cover problem (mvcp)} is a typical example of such
 problems \cite{wolfram:mvc}.
 Due to its numerous applications especially in various
 matching problems, the problem is not abandoned and it has many
 approximation algorithms.
 
-In this work, we present an alternative approach that
-uses \textit{genetic algorithms} as a generalized heuristic for
+This work presents an alternative approach that
+uses \textit{genetic algorithms (GAs)} as a generalized heuristic for
 solving NP-hard combinatorial optimization problems.
 These algorithms have been successfully applied to a broad
 range of problems.
@@ -194,11 +194,11 @@ of that problem.
 Remarkable results were obtained and compared to the results of the
 best known heuristic algorithm for the mvcp.
 
-The outline of this paper is as follows: Firstly, section~\ref{sec:ga} gives a
+The outline of this paper is as follows: Section~\ref{sec:ga} gives a
 short introduction to genetic algorithms, and explains briefly how they work.
 Section~\ref{sec:mvcp} introduces the mvcp with two of its main heuristics,
 and explains its representation for an application of the genetic algorithm.
-Lastly, section~\ref{sec:exper} presents our experimental results and
+Lastly, section~\ref{sec:exper} presents the experimental results and
 points out the notable observations that can be drawn from these results.
 
 
@@ -206,10 +206,10 @@ points out the notable observations that can be drawn from these results.
 \section{Genetic Algorithms}
 \label{sec:ga}
 \subsection{The Intuition Behind GAs}
-Genetic Algorithms (GAs) \cite{coley, goldberg} are population based
+Genetic Algorithms \cite{coley, goldberg} are population based
 search algorithms, where by repeated use of genetic operations,
 such as \textem{mutation}, \textem{selection}, \textem{crossover}, etc...
-Successive new generations of better populations in the direction of
+successive new generations of better populations in the direction of
 search objectives are created.
 They are inspired by Darwinian principles
 based on natural evolution.
@@ -240,8 +240,8 @@ i.e. how \textem{fit} an individual is?
 
 \item
 a method for mixing fragments of the better solutions to form new, on
-average even better solutions.
-Which permits the population to \textem{evolve} naturally.
+average, or even better solutions,
+which permits the population to \textem{evolve} naturally.
 
 \end{enumerate}
 
@@ -258,7 +258,7 @@ provides a quality measure which is used by the selection procedure to direct
 the search towards regions of the search space where the
 average fitness of the population increases.
 The recombination operator
-allows for the exchange of information between different individuals,
+allows the exchange of information between different individuals,
 and mutation introduces innovation into the population.
 This cycle is repeated until a termination criterion is fulfilled.
 In most cases, the algorithm is terminated after a certain number of
@@ -295,15 +295,15 @@ If the problem under consideration is a minimization one,
 or if the fitness function can take negative values,
 then $ f \left( \vec{x_i} \right) $ has to be
 linearly transformed before calculating selection probabilities.
-This technique known as linear dynamic scaling is commonly used
+This technique known as Linear Dynamic Scaling is commonly used
 in genetic algorithms \cite[pp.~123--124]{goldberg}.
 
 \paragraph{Crossover}
-The recombination (crossover) operator allows for the
+The recombination (crossover) operator allows the
 exchange of information between different individuals.
 The original one-point crossover \cite{holland} works on two parent individuals
 by choosing a crossover point $ \chi \in \{1, \dots, n-1 \} $
-at random and exchanging all bits after the $ \chi^{\text{th}} $ one
+at random, and exchanging all bits after the $ \chi^{\text{th}} $ one
 between both individuals.
 Therefore, two new off-springs will be formed.\\
 For example, if the two parents were encoded as $(111, 000)$ and we chose $\chi = 2$
@@ -348,7 +348,7 @@ mutation rate $ p_m = 1/n $ on many problems \cite{2:misp, 12:misp}.
 \Comment{$Q$ will hold the new generation}
 \Loop \ $u/2$ times
 
-\State select $x, y$ from $P$ using proportional selection
+\State select $x, y$ from $P$ using proportional selection based on $f$
 \Comment{selection}
 \State with probability $p_c$ perform crossover between $x, y$
 \Comment{crossover}
@@ -405,7 +405,7 @@ e_{ij} =
 0 & \text{otherwise}
 \end{cases}
 \]
-On particular, we have $e_{ii} = 0$.
+In particular, we have $e_{ii} = 0$.
 
 \paragraph{Feasible solution:} A set $V' \subseteq V$ such that
 $\forall \langle i, j \rangle \in E, i \in V' \vee j \in V'$
@@ -414,7 +414,7 @@ $\forall \langle i, j \rangle \in E, i \in V' \vee j \in V'$
 }
 
 An interesting property of the mvcp is that by
-solving it, we also have a solution for two other
+solving it, we also have a solution to two other
 graph problems: the \textit{maximum independent set problem}
 (given $G = (V, E)$, find the largest subset $V' \subseteq V$
 such that $\forall i, j \in V', \langle i, j \rangle \notin E$)
@@ -440,12 +440,12 @@ $\bar{E}=\left\{ \langle i, j \rangle\in V \times V :
 \end{itemize}
 \end{lemma}
 
-Consequently, one can obtain a solution of the maximum independent set
+Consequently, one can obtain a solution to the maximum independent set
 problem by taking the complement of the solution to the minimum vertex cover
 problem. A solution to the maximum clique problem is obtained by
 taking the complement of the minimum vertex cover of $\bar{G}$.
 
-\subsection{Related Algorithms}
+\subsection{Minimum Vertex Cover Approximation Algorithms}
 \label{sec:ra}
 Since we are interested in covering all the edges of the
 given graph by using as few nodes as possible, one might
@@ -458,10 +458,7 @@ of its incident edges.
 This is not a good strategy as was demonstrated
 by Papadimitriou and Steiglitz \cite[p.~407]{10:mvcp}.
 
-They considered regular graphs\footnote{%
-by ``regular graphs'' we don't refer to the definition where
-each vertex has the same degree.
-}, each of which consists of three levels.
+They considered regular graphs, each of which consists of three levels.
 The first two levels have the same
 number of nodes while the third level has two nodes less
 than the number of nodes found on the previous two
@@ -477,10 +474,10 @@ would start with the nodes of the third level, since these
 have highest degree. Consequently, the greedy strategy
 finds a solution of size $2k + 2$ (since it has to select $k + 2$
 nodes in addition to the nodes of the third level), while
-the optimal solution has size $k + 2$.
+the optimal solution has size $k + 2$~\cite{mvcp-back}.
 
 However this algorithm is not totally useless. It may be shown that it always
-achieves the ratio $\Theta(\lg n)$\footnote{$f(n) = \Theta(g(n)) \iff
+achieves the ratio $\Theta(\lg n)$\footnote[2]{$f(n) = \Theta(g(n)) \iff
 \exists \alpha, \beta, n_0 : \forall n \geq n_0, \ 
 \alpha \cdot g(n) \leq f(n) \leq \beta \cdot g(n)$ \cite[pp.~41--43]{cormen}},
 where $n$ is the number of vertices.
@@ -741,17 +738,17 @@ Experimental results obtained by the vercov heuristic for five random graphs of 
 
 
 \subsection{Experimental Conclusions}
-From these tables, a number of interesting conclusions
-can be drawn.
-For the random graphs used to compare the
+Based on the results found in the previous section,
+one can observe a number of interesting facts.
+Recall that for the random graphs used to compare the
 genetic algorithm and the vercov heuristic,
 it is known by construction that an optimum of
 quality 55 exists for test set~1,
 (respectively, an optimum of quality 110 exists
 for the test set~2).
-This optimum is likely to be the global optimum.
-And it is found by the genetic algorithm at least once
-within the $N = 100$ runs that were performed.
+This optimum is found by the genetic algorithm at least once
+within the $N = 100$ runs that were performed,
+and it is likely to be the global optimum.
 
 Moreover, the randomly constructed problems quickly
 become simpler for the genetic algorithm when the edge
