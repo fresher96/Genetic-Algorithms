@@ -471,12 +471,12 @@ The regular graph for $k = 3$ can be found in figure~\ref{fig:ps}.
 A minimum vertex cover is obtained by choosing all
 the nodes of the second level, but the greedy strategy
 would start with the nodes of the third level, since these
-have highest degree. Consequently, the greedy strategy
+have the highest degree. Consequently, the greedy strategy
 finds a solution of size $2k + 2$ (since it has to select $k + 2$
 nodes in addition to the nodes of the third level), while
 the optimal solution has size $k + 2$~\cite{mvcp-back}.
 
-However this algorithm is not totally useless. It may be shown that it always
+However, this algorithm is not totally useless. It may be shown that it always
 achieves the ratio $\Theta(\lg n)$\footnote[2]{$f(n) = \Theta(g(n)) \iff
 \exists \alpha, \beta, n_0 : \forall n \geq n_0, \ 
 \alpha \cdot g(n) \leq f(n) \leq \beta \cdot g(n)$ \cite[pp.~41--43]{cormen}},
@@ -554,7 +554,7 @@ are not covers by adding a penalty of magnitude $n$ for
 each edge $e_{ij}$ for which $i \notin V' \wedge j \notin V'$
 (note that $e_{ii}$ is previously defined to be zero).
 Consequently, any infeasible solution will have a fitness greater than
-or equal to $n$. And for any feasible solution the second term will
+or equal to $n$. And for any feasible solution, the second term will
 drop to zero, making the fitness value of the worst feasible solution at most $n$.
 
 This fitness function was developed according to the
@@ -570,7 +570,7 @@ the worst feasible solutions.
 \item The penalty should be graded, i.e., fitness values
 should improve as solutions approach feasible regions
 of the search space. In other words, the more edges a solution
-covers, the fitter it is. notice that this is guaranteed by the
+covers, the fitter it is. Notice that this is guaranteed by the
 second term in equation~\ref{eq:f}, where for each uncovered edge
 the fitness is penalized with the value of $n$.
 \end{itemize}
@@ -700,7 +700,7 @@ Experimental results obtained by the vercov heuristic for five random graphs of 
 \paragraph{Test set~2:}
 To test the behaviour of the genetic algorithm
 as well as the vercov heuristic for an even
-larger problem size, The same experiments
+larger problem size, the same experiments
 were performed for larger graphs.
 The results in table~\ref{tbl:t3}
 and table~\ref{tbl:t4} correspond to test set~2,
@@ -755,8 +755,7 @@ become simpler for the genetic algorithm when the edge
 density is increased.
 For an edge density of $d \in \{0.4, 0.5\}$, the
 genetic algorithm almost surely finds the global optimum
-of the problems, while vercov heuristic gives
-a relatively terrible results.
+of the problems, while vercov heuristic gives relatively terrible results.
 
 In case of the regular graph after Papadimitriou and
 Steiglitz, the genetic algorithm is able to find the global
@@ -777,7 +776,7 @@ For the randomly constructed graphs, the vercov heuristic
 performs poorly.
 It barely finds solutions of quality 80 (for graphs of size 100)
 and 172 (for graphs of size 200).
-Moreover, notice that the quality of its solutions are dominated
+Moreover, notice that the quality of its solutions is dominated
 by the quality of the solutions found by the genetic algorithm;
 the worst solutions found by the genetic algorithm are almost as
 good as the best solutions found by the vercov heuristic.
@@ -831,7 +830,7 @@ the minimum vertex cover problem.
 The robustness of the presented solution along with
 the positive results obtained support the idea
 that genetic algorithms are a desirable approach for tackling
-these type of problems.
+these types of problems.
 To tackle a new problem, rather than having to construct
 tailored heuristics to handle the problem under consideration,
 we advocate the use of genetic algorithms where the
